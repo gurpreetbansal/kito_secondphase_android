@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">http://68.183.74.38:8008/joao/api/</domain>
+    </domain-config>
+</network-security-config>
+
+
+
+
+
+<!--<network-security-config>-->
+<!--    <base-config cleartextTrafficPermitted="true">-->
+<!--        <trust-anchors>-->
+<!--            <certificates src="system" />-->
+<!--        </trust-anchors>-->
+<!--    </base-config>-->
+<!--</network-security-config>-->
+
+
+
+
+
+
+
+
+
+<!--<network-security-config>-->
+<!--    <base-config cleartextTrafficPermitted="true" />-->
+<!--</network-security-config>-->

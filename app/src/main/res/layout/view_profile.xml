@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:paddingBottom="16dp"
+        android:layout_height="match_parent">
+    <RelativeLayout
+            android:id="@+id/loginLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/ivUser"
+                android:src="@drawable/email"
+                android:text="@string/username"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivUser"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="NA"
+                android:theme="@style/MyEditTextTheme"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textColorHint="@color/colorTextDark"
+                android:textColor="@color/colorBlack"
+        />
+
+
+        <LinearLayout
+                android:id="@+id/cpfLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/light_bg_grey"
+                android:layout_height="wrap_content">
+
+
+            <TextView
+                    android:id="@+id/tvCpf"
+                    android:text="@string/cpf"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/cpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="NA"
+                    android:layout_marginTop="8dp"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+            />
+
+
+        </LinearLayout>
+
+
+        <TextView
+                android:id="@+id/tvContact"
+                android:text="@string/contact"
+                android:layout_below="@+id/cpfLayout"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvContact"
+                android:textSize="@dimen/_16sdp"
+                android:text="NA"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:theme="@style/MyEditTextTheme"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textColorHint="@color/colorTextDark"
+                android:textColor="@color/colorBlack"
+        />
+
+
+        <LinearLayout
+            android:visibility="gone"
+                android:id="@+id/brandLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/contact"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:background="@color/light_bg_grey"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvBrand"
+                    android:text="@string/brand"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="NA"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+                android:id="@+id/stateLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/brandLayout"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvState"
+                    android:text="@string/state"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="NA"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+                android:id="@+id/cityLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/stateLayout"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:background="@color/light_bg_grey"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvCity"
+                    android:src="@drawable/location"
+                    android:text="@string/city"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="NA"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/cityLayout"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvLoaction"
+                    android:src="@drawable/email"
+                    android:text="@string/location"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="NA"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/locationLayout"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tvEmail"
+                    android:src="@drawable/email"
+                    android:text="@string/email"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    android:textSize="@dimen/_16sdp"
+                    android:layout_marginTop="8dp"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

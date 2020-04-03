@@ -1,0 +1,149 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Kitoplastic</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="register" translatable="false">Register</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="or_login_with" tools:ignore="MissingTranslation">or Login with</string>
+    <string name="sign_in" tools:ignore="MissingTranslation">Sign in</string>
+    <string name="forgot_password" tools:ignore="MissingTranslation">Forgot password?</string>
+    <string name="email_or_cpf" tools:ignore="MissingTranslation">Email or CPF</string>
+    <string name="password" tools:ignore="MissingTranslation">Password</string>
+    <string name="don_t_have_an_account" tools:ignore="MissingTranslation">Don\'t have an account?</string>
+    <string name="by_signing_you_are_agreeing_to_the_terms_conditions_and_the_privacy_policy" tools:ignore="MissingTranslation">
+        By Signing up you are agreeing to the
+        Terms &amp; Conditions and the
+        Privacy Policy
+    </string>
+    <string name="next" tools:ignore="MissingTranslation">Next</string>
+    <string name="cpf" tools:ignore="MissingTranslation">CPF</string>
+    <string name="contact" tools:ignore="MissingTranslation">Contact</string>
+    <string name="brand" tools:ignore="MissingTranslation">Brand</string>
+    <string name="email" tools:ignore="MissingTranslation">Email</string>
+    <string name="confirmpassword" tools:ignore="MissingTranslation">Confirm Password</string>
+    <string name="signup" tools:ignore="MissingTranslation">Sign up</string>
+    <string name="already_have_an_account" tools:ignore="MissingTranslation">Already have an account?</string>
+    <string name="old_password" tools:ignore="MissingTranslation">Old Password</string>
+    <string name="new_password" tools:ignore="MissingTranslation">New Password</string>
+    <string name="confirm_password" tools:ignore="MissingTranslation">Confirm Password</string>
+    <string name="update" tools:ignore="MissingTranslation">Update</string>
+    <string name="Cancel" tools:ignore="MissingTranslation">
+        <u>Cancel</u>
+    </string>
+
+    <string name="settings" tools:ignore="MissingTranslation">Settings</string>
+    <string name="my_space" tools:ignore="MissingTranslation">My Space</string>
+    <string name="campaign" tools:ignore="MissingTranslation">Campaign</string>
+    <string name="redeem_prizes" tools:ignore="MissingTranslation">Redeem Prizes</string>
+
+    <string name="notification_two" tools:ignore="MissingTranslation">Newsletter</string>
+
+    <string name="support" tools:ignore="MissingTranslation">Support</string>
+    <string name="view_more" tools:ignore="MissingTranslation">
+        <u>View more</u>
+    </string>
+    <string name="available_points" tools:ignore="MissingTranslation">Available Points</string>
+    <string name="pending_points" tools:ignore="MissingTranslation">Pending Points</string>
+    <string name="points_earned" tools:ignore="MissingTranslation">Points Earned</string>
+    <string name="points_spent">Points Spent</string>
+    <string name="points">Points</string>
+    <string name="claimed_on">Claimed on</string>
+    <string name="expires_on">Expires on</string>
+    <string name="status">Status</string>
+    <string name="redemption_date">Redemption Date</string>
+    <string name="gift_card">Gift card</string>
+    <string name="cost">Cost</string>
+    <string name="notifications">Notifications</string>
+    <string name="forgot_your_pasword">Forgot your pasword?</string>
+    <string name="enter_you_email_below_to_receive_your_password_reset_instructions">Enter you email below to receive
+        your Password reset instructions.
+    </string>
+    <string name="send_password">Send password</string>
+    <string name="close">
+        <u>Close</u>
+    </string>
+    <string name="start_on">Start on:</string>
+    <string name="name">Name:</string>
+    <string name="end_on">End on:</string>
+    <string name="register_sales">Register sales</string>
+
+    <string name="products">Products</string>
+    <string name="filter">Filter</string>
+    <string name="regster_sale">Register Sale</string>
+    <string name="place_the_code_inside_the_frame">Place the code inside the frame</string>
+    <string name="or">Or</string>
+    <string name="redeem">Redeem</string>
+    <string name="redeem_now">Redeem Now</string>
+    <string name="choose_value_for_redemption">Choose value for redemption</string>
+    <string name="redeem_success_message">You have successfully redeemed your points.You will receive your gift card in
+        your registered email within the next 7 days.
+    </string>
+    <string name="gift_cards">Gift Cards</string>
+    <string name="submit">Submit</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+
+    <string name="privacy_policy">Privacy Policy</string>
+
+<!--    <string name="facebook_app_id">1605927482877197</string>-->
+    <string name="facebook_app_id">703545090069096</string>
+<!--    <string name="fb_login_protocol_scheme">fb1605927482877197</string>-->
+    <string name="fb_login_protocol_scheme">fb703545090069096</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_location">Select Location</string>
+    <string name="select_campaign">Select Campaign</string>
+    <string name="no_points_earned">No Points Earned</string>
+    <string name="no_points_spent">No Points Spent</string>
+    <string name="_0_products">0 Products</string>
+    <string name="no_of_points">No. of points:</string>
+    <string name="no_campaigns">No Campaigns</string>
+    <string name="please_enter_email">Please enter your email.</string>
+    <string name="enter_valid_email">Please enter valid email.</string>
+    <string name="username">Full Name</string>
+    <string name="location">Location</string>
+    <string name="please_enter_your_username">Please Enter your full name.</string>
+    <string name="please_enter_your_cpf">Please Enter your CPF.</string>
+    <string name="please_enter_your_contact_number">Please Enter your contact number.</string>
+    <string name="please_enter_your_location">Please Enter your location.</string>
+    <string name="please_enter_your_brand">Please Enter your brand.</string>
+    <string name="please_enter_your_password">Please Enter your password.</string>
+    <string name="please_enter_your_confirmed_password">Please Enter your confirmed password.</string>
+    <string name="passwords_do_not_match">Passwords do not match.</string>
+    <string name="please_enter_your_email_or_cpf">Please Enter your email or CPF.</string>
+    <string name="save">SAVE</string>
+    <string name="write_manually">Write manually</string>
+    <string name="campaigns">Campaigns</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure you want to logout?</string>
+    <string name="change_password">Change Password</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="write_your_comments_here">Write your comments here…</string>
+    <string name="change_language">Change Language</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="please_enter_your_state">Please enter your state.</string>
+    <string name="please_enter_your_city">Please enter your city.</string>
+    <string name="text_translation">Select Language</string>
+    <string name="select_language">Select Any Language</string>
+    <string name="are_you_delete">Are you sure you want to delete your account?</string>
+    <string name="notifications_admin_channel_name">KitoPlastic</string>
+    <string name="notifications_admin_channel_description">KitoPlasticTwo</string>
+    <string name="funcao">função</string>
+
+
+    <string-array name="languages">
+        <item>Select language</item>
+        <item>Pro</item>
+
+        <item>English</item>
+    </string-array>
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+</resources>

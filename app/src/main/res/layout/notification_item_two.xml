@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="4dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+
+        <TextView
+            android:id="@+id/name_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:gravity="start|center"
+            android:maxLines="2"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/tvTime_notification"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorTextDark"
+            android:gravity="start|center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/ivImage_notification"
+            android:layout_width="match_parent"
+            android:src="@drawable/welcome_logo"
+            android:layout_margin="3dp"
+            android:layout_height="@dimen/_140sdp"/>
+<!--        <LinearLayout android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_height="wrap_content">-->
+
+
+<!--            <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                android:id="@+id/ivDollar"-->
+<!--                android:visibility="invisible"-->
+<!--                android:layout_width="24dp"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:gravity="center|start"-->
+<!--                app:placeholderImage="@drawable/dollar_with_circle"-->
+<!--                android:layout_height="24dp"/>-->
+
+            <TextView
+                android:id="@+id/tvPrice_notification"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:text="nbhdsbfh hfhdgfhdgbshfbd gfhdsgbfhgdsf hdgfhdsgfhd hgfgsdhfd sjsdhfusdhfuieywhf "
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/colorTextDark"
+                android:gravity="start|center"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_height="wrap_content">-->
+
+
+<!--            <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                android:id="@+id/ivClock"-->
+<!--                android:visibility="invisible"-->
+<!--                android:layout_width="24dp"-->
+<!--                app:placeholderImage="@drawable/clock"-->
+<!--                android:layout_height="24dp"/>-->
+
+
+<!--        </LinearLayout>-->
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

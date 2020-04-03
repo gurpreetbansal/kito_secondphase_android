@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/myspace"
+            android:icon="@drawable/nav_my_space"
+            android:title="@string/my_space"/>
+
+    <item
+            android:id="@+id/campaign"
+            android:icon="@drawable/nav_campaign"
+            android:title="@string/campaign"/>
+
+    <item
+            android:id="@+id/redeemPrizes"
+            android:icon="@drawable/nav_redeem_points"
+            android:title="@string/redeem_prizes"/>
+    <item
+            android:id="@+id/support"
+            android:icon="@drawable/nav_support"
+            android:title="@string/support"/>
+</menu>

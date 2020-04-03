@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Support.SupportFragment">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+
+
+        <RelativeLayout
+                android:id="@+id/spinnerLayout"
+                android:layout_width="match_parent"
+                android:background="@drawable/grey_bg_light"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:padding="7dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            </Spinner>
+
+        </RelativeLayout>
+
+
+        <EditText
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/spinnerLayout"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="@dimen/_14sdp"
+                android:hint="@string/write_your_comments_here"
+                android:gravity="top"
+                android:padding="8dp"
+                android:background="@drawable/grey_bg_light"
+                android:layout_height="140dp"/>
+
+
+        <TextView
+                android:id="@+id/btnSubmit"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:layout_below="@+id/etComment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="48dp"
+                android:paddingEnd="48dp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/colorLightBlack"
+                android:background="@drawable/yellow_bg_rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/proxima_nova_semibold"
+        />
+
+        <TextView
+                android:id="@+id/tvCancel"
+                android:layout_below="@+id/btnSubmit"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_16sdp"
+                android:text="@string/Cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</FrameLayout>

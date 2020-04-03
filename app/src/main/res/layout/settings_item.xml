@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:actualImageScaleType="fitXY"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+    <TextView
+            android:id="@+id/tvTitle"
+            app:layout_constraintTop_toTopOf="@+id/ivLogo"
+            app:layout_constraintBottom_toBottomOf="@+id/ivLogo"
+            app:layout_constraintStart_toEndOf="@+id/ivLogo"
+            app:layout_constraintEnd_toStartOf="@+id/ivNext"
+            android:gravity="center|start"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textColor="@color/colorTextDark"
+            android:layout_width="0dp"
+            android:padding="16dp"
+            android:layout_height="wrap_content"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ivNext"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            app:placeholderImage="@drawable/blue_arrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+
+
+    <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="1dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

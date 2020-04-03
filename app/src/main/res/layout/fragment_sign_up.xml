@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.SignUp.SignUpFragmentTwo">
+
+
+    <RelativeLayout
+        android:id="@+id/signup1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/white_bg_rounded"
+            android:paddingTop="8dp"
+            android:paddingBottom="38dp">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderImage="@drawable/user" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivCamera"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivImage"
+                app:layout_constraintEnd_toEndOf="@+id/ivImage"
+                app:placeholderImage="@drawable/camera" />
+
+            <RelativeLayout
+                android:id="@+id/loginLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivImage">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivUser"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/email"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/username" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/ivUser"
+                    android:text="@string/username"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13sdp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_toEndOf="@+id/ivUser"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:hint="@string/username"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme" />
+
+                <!--secod-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_funcao"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/etName"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/lock"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/username" />
+                <TextView
+                    android:id="@+id/tv_funcao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etName"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/ivCpf"
+                    android:text="@string/funcao"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13sdp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_funcao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_funcao"
+                    android:layout_toEndOf="@+id/iv_funcao"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:hint="escolha o tipo de usuario"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginStart="2dp"
+                   android:visibility="gone" />
+                <Spinner
+
+                    android:overlapAnchor="false"
+                    android:id="@+id/spinner_funcao"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="@string/select_language"
+                    android:layout_below="@+id/tv_funcao"
+                    android:layout_toEndOf="@+id/iv_funcao"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:hint="escolha o tipo de usuario"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginStart="2dp"
+                    />
+                <!--secod-->
+
+                <!--third-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivCpf"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/et_funcao"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/lock"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/username" />
+                <TextView
+                    android:id="@+id/tvCpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_funcao"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@+id/ivCpf"
+                    android:text="@string/cpf"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp" />
+                <!--third-->
+
+                <EditText
+                    android:id="@+id/etcpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCpf"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="-1dp"
+                    android:layout_toEndOf="@+id/ivCpf"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:hint="____.____.____-____"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme"
+                    tools:ignore="RtlCompat" />
+
+                <ImageView
+                    android:id="@+id/cpf_img"
+                    android:layout_width="19dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/et_funcao"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginTop="70dp"
+
+                    android:src="@drawable/verify_icon_oo"
+                    app:actualImageScaleType="centerInside"
+                    tools:ignore="MissingPrefix" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivContact"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/etcpf"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/lock"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/phone" />
+
+                <TextView
+                    android:id="@+id/tvContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etcpf"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/ivContact"
+                    android:text="@string/contact"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13sdp" />
+
+               <LinearLayout
+                   android:id="@+id/ll_contact"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_below="@+id/tvContact"
+                   android:layout_toEndOf="@+id/ivContact"
+                   android:layout_marginTop="@dimen/_5sdp">
+                   <EditText
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="+55 "
+                       android:id="@+id/txt_code"
+                       android:textColor="@color/colorBlack"
+                       android:textSize="@dimen/_16sdp"
+                      android:background="@color/transparent" />
+                   <EditText
+                       android:background="@color/transparent"
+                       android:id="@+id/etContact"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/tvContact"
+                       android:layout_toEndOf="@+id/ivContact"
+                       android:fontFamily="@font/proxima_nova_regular"
+                       android:hint="xxx-xxxx-xxxx"
+                       android:imeOptions="actionDone"
+                       android:inputType="phone"
+                       android:maxLength="15"
+                       android:textColor="@color/colorBlack"
+                       android:textSize="@dimen/_16sdp"
+                      />
+
+               </LinearLayout>
+
+                <View
+                    android:layout_below="@+id/ll_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:theme="@style/MyEditTextTheme"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+
+
+
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-38dp"
+            android:background="@drawable/yellow_bg_rounded"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:paddingStart="48dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="48dp"
+            android:paddingBottom="12dp"
+            android:text="@string/next"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_14sdp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/signup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <!--
+                <include
+                        layout="@layout/activity_signupnew"/>-->
+        <include layout="@layout/activity_signup2" />
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".Login.SignUp.SignUpFragmentTwo">-->
+
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/signup1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/topLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:background="@drawable/white_bg_rounded"-->
+<!--            android:paddingTop="8dp"-->
+<!--            android:paddingBottom="38dp">-->
+
+
+<!--            <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                android:id="@+id/ivImage"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:placeholderImage="@drawable/user" />-->
+
+<!--            <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                android:id="@+id/ivCamera"-->
+<!--                android:layout_width="28dp"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/ivImage"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/ivImage"-->
+<!--                app:placeholderImage="@drawable/camera" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/loginLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/ivImage">-->
+
+<!--                <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                    android:id="@+id/ivUser"-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:src="@drawable/email"-->
+<!--                    app:actualImageScaleType="centerInside"-->
+<!--                    app:placeholderImage="@drawable/username" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvName"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="2dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_toEndOf="@+id/ivUser"-->
+<!--                    android:text="@string/username"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:textSize="@dimen/_13sdp" />-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/etName"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/tvName"-->
+<!--                    android:layout_toEndOf="@+id/ivUser"-->
+<!--                    android:fontFamily="@font/proxima_nova_regular"-->
+<!--                    android:hint="@string/username"-->
+<!--                    android:imeOptions="actionNext"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="@dimen/_16sdp"-->
+<!--                    android:theme="@style/MyEditTextTheme" />-->
+
+
+<!--                <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                    android:id="@+id/ivCpf"-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:layout_below="@+id/etName"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:src="@drawable/lock"-->
+<!--                    app:actualImageScaleType="centerInside"-->
+<!--                    app:placeholderImage="@drawable/username" />-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tvCpf"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/etName"-->
+<!--                    android:layout_marginStart="2dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_toEndOf="@+id/ivCpf"-->
+<!--                    android:text="@string/cpf"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:textSize="@dimen/_13sdp" />-->
+<!--                <EditText-->
+<!--                    android:id="@+id/etcpf"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/tvCpf"-->
+<!--                    android:layout_toEndOf="@+id/ivCpf"-->
+<!--                    android:fontFamily="@font/proxima_nova_regular"-->
+<!--                    android:hint="____.____.____-____"-->
+<!--                    android:imeOptions="actionDone"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="14"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="@dimen/_16sdp"-->
+<!--                    android:theme="@style/MyEditTextTheme"-->
+<!--                    tools:ignore="RtlCompat"-->
+<!--                   />-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/cpf_img"-->
+<!--                    android:layout_width="19dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:layout_below="@+id/etName"-->
+<!--                    android:layout_marginStart="270dp"-->
+<!--                    android:layout_marginTop="51dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:src="@drawable/verify_icon_oo"-->
+
+<!--                    app:actualImageScaleType="centerInside"-->
+<!--                    />-->
+
+<!--                <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                    android:id="@+id/ivContact"-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:layout_below="@+id/etcpf"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:src="@drawable/lock"-->
+<!--                    app:actualImageScaleType="centerInside"-->
+<!--                    app:placeholderImage="@drawable/phone" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvContact"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/etcpf"-->
+<!--                    android:layout_marginStart="2dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_toEndOf="@+id/ivContact"-->
+<!--                    android:text="@string/contact"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:textSize="@dimen/_13sdp" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etContact"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/tvContact"-->
+<!--                    android:layout_toEndOf="@+id/ivContact"-->
+<!--                    android:fontFamily="@font/proxima_nova_regular"-->
+<!--                    android:hint="xx-xxxx-xxxx"-->
+<!--                    android:imeOptions="actionDone"-->
+<!--                    android:inputType="phone"-->
+<!--                    android:maxLength="15"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="@dimen/_16sdp"-->
+<!--                    android:theme="@style/MyEditTextTheme" />-->
+
+
+<!--            </RelativeLayout>-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/btnNext"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/topLayout"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="-38dp"-->
+<!--            android:background="@drawable/yellow_bg_rounded"-->
+<!--            android:fontFamily="@font/proxima_nova_semibold"-->
+<!--            android:paddingStart="48dp"-->
+<!--            android:paddingTop="12dp"-->
+<!--            android:paddingEnd="48dp"-->
+<!--            android:paddingBottom="12dp"-->
+<!--            android:text="@string/next"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="@color/colorPrimary"-->
+<!--            android:textSize="@dimen/_14sdp" />-->
+
+
+<!--    </RelativeLayout>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/signup2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone">-->
+<!--        &lt;!&ndash;-->
+<!--                <include-->
+<!--                        layout="@layout/activity_signupnew"/>&ndash;&gt;-->
+<!--        <include layout="@layout/activity_signup2" />-->
+<!--    </LinearLayout>-->
+
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:visibility="gone" />-->
+
+<!--</FrameLayout>-->

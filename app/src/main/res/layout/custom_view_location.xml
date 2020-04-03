@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:id="@+id/active_main">
+    <FrameLayout
+        android:id="@+id/frame_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/location_txt_bg">
+    <TextView
+        android:id="@+id/txt_location_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_margin="@dimen/_2sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/img_cross"
+        android:layout_width="@dimen/_9sdp"
+        android:layout_height="@dimen/_9sdp"
+        android:src="@mipmap/cross"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_alignEnd="@+id/frame_one"
+        android:tint="@color/colorPrimaryDark" />
+    <!--    <ImageView-->
+<!--        android:id="@+id/img_cross"-->
+<!--        android:layout_width="@dimen/_7sdp"-->
+<!--        android:layout_height="@dimen/_7sdp"-->
+<!--       android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="@dimen/_2sdp"-->
+<!--        android:src="@mipmap/cross"-->
+<!--        android:tint="@color/colorPrimaryDark" />-->
+</RelativeLayout>

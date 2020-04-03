@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:id="@+id/mainLayout"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+            android:id="@+id/tvRedemtion"
+            android:layout_width="0dp"
+            android:layout_weight="1.4"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginStart="2dp"
+            android:textColor="@color/colorGrey"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tvGiftcard"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorGrey"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tvCost"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorGrey"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorGrey"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
+

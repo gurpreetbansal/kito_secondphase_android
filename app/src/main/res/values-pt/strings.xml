@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--<string name="app_name">Kitoplástico</string>-->
+    <string name="app_name">Kitoplastic</string>
+    <string name="login">Entrar</string>
+    <string name="register">cadastrar-se</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="or_login_with">ou Login com</string>
+    <string name="sign_in">ENTRAR</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="email_or_cpf">E-mail ou CPF</string>
+    <string name="password">Senha</string>
+    <string name="don_t_have_an_account">Não tem uma conta?</string>
+    <string name="by_signing_you_are_agreeing_to_the_terms_conditions_and_the_privacy_policy">
+        Ao se inscrever, você concorda com o
+        Termos e Condições e o
+        Política de Privacidade
+    </string>
+    <string name="next">Próxima</string>
+    <string name="cpf">CPF</string>
+    <string name="contact">Contato</string>
+    <string name="brand">Marca</string>
+    <string name="email">O email</string>
+    <string name="confirmpassword">Confirme a Senha</string>
+    <string name="signup">inscrever-se</string>
+    <string name="already_have_an_account">já tem uma conta??</string>
+    <string name="old_password">Senha Antiga</string>
+    <string name="new_password">Nova senhad</string>
+    <string name="confirm_password">Confirme a Senha</string>
+    <string name="update">Atualizar</string>
+    <string name="Cancel"><u>Cancelar</u>
+    </string>
+
+    <string name="settings">Definições</string>
+    <string name="my_space">Início</string>
+    <string name="campaign">Campanhas</string>
+    <string name="redeem_prizes">Resgatar</string>
+    <string name="notification_two">Novidades</string>
+    <string name="support">Suporte</string>
+    <string name="view_more">
+        <u>Ver perfi</u>
+    </string>
+    <string name="available_points">Pontos Disponíveis</string>
+    <string name="pending_points">Pontos pendentes</string>
+    <string name="points_earned">Pontos ganhos</string>
+    <string name="points_spent">Pontos gastos</string>
+    <string name="points">Pontos</string>
+    <string name="claimed_on">Reivindicado em</string>
+    <string name="expires_on">Expira em</string>
+    <string name="status">Status</string>
+    <string name="redemption_date">data de resgate</string>
+    <string name="gift_card">Cartão Presente</string>
+    <string name="cost">Custo</string>
+    <string name="notifications">Notificações</string>
+    <string name="forgot_your_pasword">Esqueceu sua senha?</string>
+    <string name="enter_you_email_below_to_receive_your_password_reset_instructions">
+        Digite seu e-mail abaixo para receber
+        suas instruções de redefinição de senha.
+    </string>
+    <string name="send_password">Enviar senha</string>
+    <string name="close"> <u>
+        Fechar</u>
+    </string>
+    <string name="start_on">Comece em::</string>
+    <string name="name">Nome:</string>
+    <string name="end_on">
+        termina em::</string>
+    <string name="register_sales">Registrar vendas</string>
+
+    <string name="products">Produtos</string>
+    <string name="filter">
+        Filtro</string>
+    <string name="regster_sale">Registrar Vendae</string>
+    <string name="place_the_code_inside_the_frame">
+        Coloque o código dentro do quadro</string>
+    <string name="or">Ou</string>
+    <string name="redeem">Resgatar</string>
+    <string name="redeem_now">Resgatar Agora</string>
+    <string name="choose_value_for_redemption">
+        Escolha o valor para resgate</string>
+    <string name="redeem_success_message">
+        Você resgatou seus pontos com sucesso. Você receberá seu cartão-presente em
+        seu e-mail registrado nos próximos sete dias.
+    </string>
+    <string name="gift_cards">
+        Cartões de presente</string>
+    <string name="submit">
+        Enviar</string>
+    <string name="terms_conditions"><![CDATA[termos e Condições]]></string>
+
+    <string name="privacy_policy">
+        Política de Privacidade</string>
+
+
+    <string name="facebook_app_id">703545090069096</string>
+    <string name="fb_login_protocol_scheme">fb703545090069096</string>
+    <string name="ok">
+        Está bem</string>
+    <string name="cancel">
+        Cancelar</string>
+    <string name="select_location">
+        Selecione o localn</string>
+    <string name="select_campaign">Selecione Campanha</string>
+    <string name="no_points_earned">Nenhum ponto ganho</string>
+    <string name="no_points_spent">Nenhum ponto gasto</string>
+    <string name="_0_products">0 Produtos</string>
+    <string name="no_of_points">No. de pontos:</string>
+    <string name="no_campaigns">Nenhuma campanha</string>
+    <string name="please_enter_email">
+        Por favor introduza o seu e-mail.</string>
+    <string name="enter_valid_email">
+        Por favor insira um e-mail válido.</string>
+    <string name="username">nome completo</string>
+    <string name="location">Localização</string>
+    <string name="please_enter_your_username">Por favor insira seu nome completo.</string>
+    <string name="please_enter_your_cpf">Por favor, insira o seu CPF.</string>
+    <string name="please_enter_your_contact_number">Por favor, digite seu número de contato.</string>
+    <string name="please_enter_your_location">Por favor, indique a sua localização.</string>
+    <string name="please_enter_your_brand">
+        Por favor, insira sua marca.</string>
+    <string name="please_enter_your_password">
+        Por favor, insira sua senha.</string>
+    <string name="please_enter_your_confirmed_password">
+        Por favor, digite sua senha confirmada.</string>
+    <string name="passwords_do_not_match">As senhas não coincidem.</string>
+    <string name="please_enter_your_email_or_cpf">Por favor, digite seu e-mail ou CPF</string>
+    <string name="save">
+        SALVE</string>
+    <string name="write_manually">Escreva manualmente</string>
+    <string name="campaigns">Campanhas</string>
+    <string name="are_you_sure_you_want_to_logout">
+        Tem certeza que deseja sair?</string>
+    <string name="change_password">Mudar senha</string>
+    <string name="delete_account">Deletar conta</string>
+    <string name="write_your_comments_here">
+        Escreva seus comentários aqui ...</string>
+    <string name="change_language">
+        Mudar idioma</string>
+    <string name="state">
+        Estado</string>
+    <string name="city">Cidade</string>
+    <string name="please_enter_your_state">
+        Por favor, digite seu estado.</string>
+    <string name="please_enter_your_city">
+        Por favor digite sua cidade..</string>
+    <string name="are_you_delete">Tem certeza de que deseja excluir sua conta?</string>
+    <string-array name="items1" tools:ignore="ExtraTranslation">
+        <item >Item 1</item>
+        <item >Item 2</item>
+        <item >Item 3</item>
+        <item >Item 4</item>
+    </string-array>
+</resources>

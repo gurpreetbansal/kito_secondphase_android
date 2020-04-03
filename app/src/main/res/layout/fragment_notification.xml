@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RedeemPrizes.RedeemPrizesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txt_news_not_available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nenhuma notícia está disponível"
+            android:layout_below="@+id/toolbar"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="center"
+            android:textColor="@color/colorBlueApp"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+<LinearLayout
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:orientation="horizontal"
+    android:layout_below="@+id/toolbar">
+    <TextView
+        android:textColor="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/txt_values_of_news"/>
+    <TextView
+        android:textColor="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/txt_values_of_brand"/>
+</LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_notification"
+            android:layout_marginTop="8dp"
+
+            android:layout_below="@+id/ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_marginTop="8dp"
+                                             android:paddingTop="16dp"
+                                             android:paddingBottom="16dp"
+                                             android:layout_height="match_parent">
+    <RelativeLayout
+            android:id="@+id/loginLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivUser"
+                android:src="@drawable/email"
+                app:placeholderImage="@drawable/username"
+                app:actualImageScaleType="centerInside"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameLayout"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@+id/ivUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary"
+                app:hintTextAppearance="@style/TextLabelHeading"
+                android:theme="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:text="NA"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+                    android:hint="@string/username"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivCpf"
+                android:src="@drawable/lock"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                app:placeholderImage="@drawable/username"
+                app:actualImageScaleType="centerInside"
+                android:layout_below="@+id/nameLayout"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cpfLayout"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/ivCpf"
+                android:layout_below="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary"
+                app:hintTextAppearance="@style/TextLabelHeading"
+                android:theme="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etcpf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"
+                    android:text="NA"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+                    android:hint="@string/cpf"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivContact"
+                android:src="@drawable/lock"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                app:placeholderImage="@drawable/phone"
+                app:actualImageScaleType="centerInside"
+                android:layout_below="@+id/cpfLayout"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contact"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/ivContact"
+                android:layout_below="@+id/cpfLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary"
+                app:hintTextAppearance="@style/TextLabelHeading"
+                android:theme="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:imeOptions="actionDone"
+                    android:text="NA"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+                    android:hint="@string/contact"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivBrand"
+                android:src="@drawable/brand"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/contact"
+                app:placeholderImage="@drawable/brand"
+                app:actualImageScaleType="centerInside"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+
+        <RelativeLayout
+                android:id="@+id/brandLayout"
+                android:layout_width="match_parent"
+                android:layout_toEndOf="@+id/ivBrand"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/contact"
+                android:layout_marginEnd="16dp"
+                android:layout_height="55dp">
+
+            <TextView
+                    android:id="@+id/tvBrand"
+                    android:text="@string/brand"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <Spinner
+                    android:id="@+id/spinnerBrands_edit"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvBrand"
+                    android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_below="@+id/spinnerBrands"
+                  android:background="@color/colorBlueLight"
+                  android:layout_height="1dp"/>
+
+        </RelativeLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivState"
+                android:src="@drawable/location"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/brandLayout"
+                app:placeholderImage="@drawable/location"
+                app:actualImageScaleType="centerInside"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+        <RelativeLayout
+                android:id="@+id/StateLayout"
+                android:layout_width="match_parent"
+                android:layout_toEndOf="@+id/ivState"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/brandLayout"
+                android:layout_marginEnd="16dp"
+                android:layout_height="55dp">
+
+            <TextView
+                    android:id="@+id/tvState"
+                    android:text="@string/state"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <Spinner
+                    android:id="@+id/spinnerStates_edit"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvState"
+                    android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_below="@+id/spinnerStates"
+                  android:background="@color/colorBlueLight"
+                  android:layout_height="1dp"/>
+
+        </RelativeLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivCity"
+                android:src="@drawable/location"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/StateLayout"
+                app:placeholderImage="@drawable/location"
+                app:actualImageScaleType="centerInside"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+
+        <RelativeLayout
+                android:id="@+id/CityLayout"
+                android:layout_width="match_parent"
+                android:layout_toEndOf="@+id/ivCity"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/StateLayout"
+                android:layout_marginEnd="16dp"
+                android:layout_height="55dp">
+
+            <TextView
+                    android:id="@+id/tvCity"
+                    android:text="@string/city"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <Spinner
+                    android:id="@+id/spinnerCities_edit"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvCity"
+                    android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_below="@+id/spinnerCities"
+                  android:background="@color/colorBlueLight"
+                  android:layout_height="1dp"/>
+
+        </RelativeLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivLocation"
+                android:src="@drawable/email"
+                app:placeholderImage="@drawable/location"
+                app:actualImageScaleType="centerInside"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/CityLayout"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+
+        <RelativeLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:layout_toEndOf="@+id/ivLocation"
+                android:layout_below="@+id/CityLayout"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="50dp">
+
+            <TextView
+                    android:id="@+id/tvLocation"
+                    android:text="@string/location"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <Spinner
+                    android:id="@+id/spinnerLocations_edit"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvLocation"
+                    android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:background="@color/colorBlueLight"
+                  android:layout_height="1dp"/>
+
+        </RelativeLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivEmail"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                app:placeholderImage="@drawable/email"
+                app:actualImageScaleType="centerInside"
+                android:layout_below="@+id/locationLayout"
+                android:layout_width="16dp"
+                android:layout_height="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/ivEmail"
+                android:layout_below="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary"
+                app:hintTextAppearance="@style/TextLabelHeading"
+                android:theme="@style/TextLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionDone"
+                    android:text="NA"
+                    android:textSize="@dimen/_16sdp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:theme="@style/MyEditTextTheme"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColorHint="@color/colorTextDark"
+                    android:textColor="@color/colorBlack"
+                    android:hint="@string/email"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

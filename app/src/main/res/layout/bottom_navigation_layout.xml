@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_navigation"
+        android:layout_height="70dp">
+
+    <LinearLayout
+            android:id="@+id/mySpaceTab"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivMySpace"
+                android:layout_width="26dp"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/nav_my_space"
+                android:layout_gravity="center"
+                android:layout_height="26dp"/>
+
+        <TextView
+                android:id="@+id/tvMySpace"
+                android:text="@string/my_space"
+                android:textColor="@color/colorYellow"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/campaignTab"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:orientation="vertical"
+            android:paddingEnd="8dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivCampaign"
+                android:layout_width="26dp"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/nav_campaign_white"
+                android:layout_gravity="center"
+                android:layout_height="26dp"/>
+
+        <TextView
+                android:id="@+id/tvCampaign"
+                android:text="@string/campaign"
+                android:textColor="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/redeemTab"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:paddingStart="8dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivRedeem"
+                android:layout_width="26dp"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/nav_redeem_points_white"
+                android:layout_gravity="center"
+                android:layout_height="20dp"/>
+
+        <TextView
+                android:id="@+id/tvRedeem"
+                android:text="@string/redeem_prizes"
+                android:textColor="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/supportTab"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivSupport"
+                android:layout_width="26dp"
+                app:actualImageScaleType="fitXY"
+                app:placeholderImage="@drawable/newsletter_white"
+                android:layout_gravity="center"
+                android:layout_height="26dp"/>
+
+        <TextView
+                android:id="@+id/tvSupport"
+                android:text="Novidades"
+                android:textColor="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_10sdp"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

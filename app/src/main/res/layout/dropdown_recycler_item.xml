@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14sdp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Rajeshwari yadava"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:textColor="@color/colorBlack"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+    />
+</RelativeLayout>

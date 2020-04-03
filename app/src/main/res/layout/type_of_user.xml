@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_40sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/moodText"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:text="@string/select_language"
+        android:gravity="center"
+android:layout_marginLeft="@dimen/_5sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/colorGrey"
+        />
+</LinearLayout>
+

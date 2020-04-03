@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:gravity="center"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="@dimen/_40sdp"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+            android:id="@+id/moodImage"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:srcCompat="@drawable/angry"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:id="@+id/moodText"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:text="@string/select_language"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorPrimaryDark"
+            android:drawablePadding="@dimen/_10sdp"/>
+</LinearLayout>
+
+
+
+<!--    <LinearLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@+id/imageView"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_60sdp"
+            android:background="@drawable/spinner_back">
+        <TextView
+                android:id="@+id/txt_select_lan"
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="@string/select_language"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:drawablePadding="@dimen/_10sdp"
+                />
+        <ImageView
+                android:id="@+id/img_select_lan"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+        android:src="@drawable/down_arrow"/>
+        <Spinner
+                android:background="@null"
+                android:id="@+id/languageSpinner"
+                android:visibility="gone"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="@string/select_language"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:drawablePadding="@dimen/_10sdp"/>
+
+    </LinearLayout>
+-->

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "889969894875",
+    "firebase_url": "https://kitoplastic-e548d.firebaseio.com",
+    "project_id": "kitoplastic-e548d",
+    "storage_bucket": "kitoplastic-e548d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889969894875:android:151a1873afd3073a7373fe",
+        "android_client_info": {
+          "package_name": "com.diggytech.kinoplasticpremios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "889969894875-nbbr5uh2po72kld9jri01mljn4360fvl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.diggytech.kinoplasticpremios",
+            "certificate_hash": "7d5866bd6f6392191063bf91bc14b81ef8e41b79"
+          }
+        },
+        {
+          "client_id": "889969894875-moqhonldl8mkti54smh7cb3bkdt37j68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAQHWXz_VTwtZrRR4WVkx_UTvlyjN3NYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "889969894875-moqhonldl8mkti54smh7cb3bkdt37j68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

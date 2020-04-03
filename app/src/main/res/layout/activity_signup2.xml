@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Login.SignUp.SignUpFragmentTwo">
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_arrow_back_white" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivBack"
+                android:layout_margin="20dp"
+                android:background="@drawable/white_bg_rounded"
+                android:paddingTop="8dp"
+                android:paddingBottom="38dp">
+
+
+            <RelativeLayout
+                    android:id="@+id/loginLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivBrand"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/brand"
+                        app:actualImageScaleType="centerInside"
+                        app:placeholderImage="@drawable/brand" />
+
+
+                <RelativeLayout
+                        android:id="@+id/brandLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@+id/ivBrand">
+
+                    <TextView
+                            android:id="@+id/tvBrand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/brand"
+                            android:textColor="@color/colorPrimary" />
+<!-- android:visibility="gone"-->
+                    <Spinner
+                            android:id="@+id/spinnerBrands"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvBrand"
+                             />
+
+                    <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvBrand"
+                            android:gravity="center"
+                        android:visibility="gone"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                        <TextView
+                                android:id="@+id/txt_spinnerBrands"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvBrand"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.8"
+                                android:textSize="@dimen/_14sdp"
+                                android:textColor="@color/colorBlack"
+                                android:gravity="center|left"
+                                android:text="Selecione qualquer valor" />
+
+                        <ImageView
+                                android:id="@+id/img_spinnerBrands"
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_40sdp"
+                                android:layout_weight="0.3"
+                                android:tint="@color/colorGrey"
+                                android:src="@mipmap/drop_down_arrow" />
+                    </LinearLayout>
+
+                    <!--  <View android:layout_width="match_parent"
+                                              android:layout_below="@+id/spinnerBrands"
+                                              android:background="@color/colorBlueLight"
+                                              android:layout_height="1dp"/>-->
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_45sdp"
+                            android:background="@color/colorBlueLight" />
+
+                </RelativeLayout>
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivState"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/brandLayout"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/location"
+                        app:actualImageScaleType="centerInside"
+                        app:placeholderImage="@drawable/location" />
+
+                <RelativeLayout
+                        android:id="@+id/StateLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/brandLayout"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@+id/ivBrand">
+
+                    <TextView
+                            android:id="@+id/tvState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/state"
+                            android:textColor="@color/colorPrimary" />
+<!-- android:visibility="gone"-->
+                    <Spinner
+                            android:id="@+id/spinnerStates"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvState"
+                       />
+                    <LinearLayout
+android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvState"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_7sdp">
+
+                        <TextView
+                            android:id="@+id/txt_spinnerStates_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvState"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.9"
+                            android:gravity="center|left"
+                            android:text=""
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <ImageView
+
+                            android:id="@+id/img_spinnerStates_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_40sdp"
+                            android:layout_weight="0.1"
+                            android:tint="@color/colorGrey"
+                            android:src="@mipmap/drop_down_arrow" />
+                    </LinearLayout>
+                    <View
+                            android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorBlueLight"
+                        android:layout_height="1dp"
+                       />
+
+                </RelativeLayout>
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivCity"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/StateLayout"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/location"
+                        app:actualImageScaleType="centerInside"
+                        app:placeholderImage="@drawable/location" />
+
+                <RelativeLayout
+                        android:id="@+id/CityLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/StateLayout"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@+id/ivBrand">
+
+                    <TextView
+                            android:id="@+id/tvCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/city"
+                            android:textColor="@color/colorPrimary" />
+
+                    <Spinner
+                            android:id="@+id/spinnerCities"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCity"
+                       />
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCity"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txt_spinnerCities_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCity"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.9"
+                            android:gravity="center|left"
+                            android:text=""
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <ImageView
+
+                            android:id="@+id/img_spinnerCities_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_40sdp"
+                            android:layout_weight="0.1"
+                            android:tint="@color/colorGrey"
+                            android:src="@mipmap/drop_down_arrow" />
+                    </LinearLayout>
+                    <View
+                            android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorBlueLight"
+                        android:layout_height="1dp" />
+
+                </RelativeLayout>
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivLocation"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/CityLayout"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/email"
+                        app:actualImageScaleType="centerInside"
+                        app:placeholderImage="@drawable/location" />
+
+
+                <RelativeLayout
+                        android:id="@+id/nameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_below="@+id/CityLayout"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@+id/ivLocation">
+
+                    <TextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/location"
+                            android:textColor="@color/colorPrimary" />
+<!--android:focusable="false-->
+
+                    <!--android:focusableInTouchMode="false"
+android:clickable="false"
+android:focusable="false"-->
+<!--                     android:visibility="gone"-->
+                    <Spinner
+
+                            android:id="@+id/spinnerLocations"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvLocation"
+
+                      />
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvLocation"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:visibility="gone">
+
+                        <TextView
+
+                            android:id="@+id/txt_spinnerLocations_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvLocation"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.9"
+                            android:gravity="center|left"
+                            android:text=""
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/colorBlack"/>
+
+                        <ImageView
+
+                            android:id="@+id/img_spinnerLocations_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_marginLeft="@dimen/_40sdp"
+                            android:layout_weight="0.1"
+                            android:tint="@color/colorGrey"
+                            android:src="@mipmap/drop_down_arrow" />
+                    </LinearLayout>
+                    <View
+                            android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorBlueLight"
+                        android:layout_height="1dp" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_below="@+id/nameLayout"
+                   android:layout_marginLeft="@dimen/_20sdp"
+                   >
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivEmail"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/recyclerview_location"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:actualImageScaleType="centerInside"
+                        app:placeholderImage="@drawable/email" />
+
+                <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/recyclerview_location"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_toEndOf="@+id/ivEmail"
+                        android:text="@string/email"
+                        android:textColor="@color/colorPrimary" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvEmail"
+                        android:layout_toEndOf="@+id/ivEmail"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:hint="abc@gmail.com"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp"
+                        android:theme="@style/MyEditTextTheme" />
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivPassword"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/etEmail"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:actualImageScaleType="centerInside"
+                        app:placeholderImage="@drawable/lock" />
+
+                <TextView
+                        android:id="@+id/tvPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etEmail"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_toEndOf="@+id/ivEmail"
+                        android:text="@string/password"
+                        android:textColor="@color/colorPrimary" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvPassword"
+                        android:layout_toEndOf="@+id/ivEmail"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:hint="123abc"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp"
+                        android:theme="@style/MyEditTextTheme" />
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ivConfirmPassword"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/etPassword"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:actualImageScaleType="centerInside"
+                        app:placeholderImage="@drawable/lock" />
+
+                <TextView
+                        android:id="@+id/tvConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etPassword"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_toEndOf="@+id/ivConfirmPassword"
+                        android:text="@string/confirm_password"
+                        android:textColor="@color/colorPrimary" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvConfirmPassword"
+                        android:layout_toEndOf="@+id/ivConfirmPassword"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:hint="123abc"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp"
+                        android:theme="@style/MyEditTextTheme" />
+                <TextView
+                    android:id="@+id/etfcm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:theme="@style/MyEditTextTheme"
+                    />
+
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-38dp"
+                android:background="@drawable/yellow_bg_rounded"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:paddingStart="48dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="48dp"
+                android:paddingBottom="12dp"
+                android:text="@string/signup"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+
+    </RelativeLayout>
+</FrameLayout>

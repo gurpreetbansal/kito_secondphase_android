@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SelectLocation.SelectLocationActivity">
+    <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+    <TextView
+            android:id="@+id/tvLocation"
+            android:text="@string/campaigns"
+            android:textSize="19sp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Spinner
+            android:id="@+id/spinnerLocations"
+            android:padding="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tvLocation"
+            android:layout_height="wrap_content"/>
+
+    <View android:layout_width="match_parent"
+          android:layout_marginStart="16dp"
+          android:layout_marginEnd="16dp"
+          android:layout_below="@+id/spinnerLocations"
+          android:background="@color/colorBlueLight"
+          android:layout_height="1dp"/>
+
+
+    <TextView
+            android:id="@+id/btnSubmit"
+            android:text="@string/submit"
+            android:textAllCaps="true"
+            android:layout_below="@+id/spinnerLocations"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="88dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="36dp"
+            android:textSize="15sp"
+            android:textColor="@color/colorLightBlack"
+            android:background="@drawable/yellow_bg_rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_nova_semibold"
+    />
+
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>
