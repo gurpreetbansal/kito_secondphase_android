@@ -65,6 +65,8 @@ class SignInPresenter(val view: SignInContract.View) {
                         val object1 = JSONObject(res)
                         val success = object1.optString("success")
                         val token = object1.optString("token")
+
+//                        Log.e("Tocken",token + "-" +)
                         if (success == "true") {
                             val data = object1.optJSONObject("data")
                             view.saveLoginDataToPrefs(data, token)

@@ -32,7 +32,6 @@ interface APIService {
     @POST("auth/getAllCity")
     fun City_List( @Body data: CityListRequest): Call<CityListResponse>
 
-
 //    @Multipart
 //    @POST("uploadimage")
 //    fun Update_Image(
