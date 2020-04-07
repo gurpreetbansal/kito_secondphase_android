@@ -19,8 +19,10 @@
     <string name="next">Próxima</string>
     <string name="cpf">CPF</string>
     <string name="contact">Contato</string>
-    <string name="brand">Marca</string>
+    <string name="group">Grupo</string>
+    <string name="dob">Data de nascimento</string>
     <string name="email">O email</string>
+    <string name="gender">Gênero</string>
     <string name="confirmpassword">Confirme a Senha</string>
     <string name="signup">inscrever-se</string>
     <string name="already_have_an_account">já tem uma conta??</string>
@@ -66,7 +68,8 @@
     <string name="name">Nome:</string>
     <string name="end_on">
        termina em:</string>
-    <string name="register_sales">Registrar vendas</string>
+<!--    <string name="register_sales">Registrar vendas</string>-->
+    <string name="start_mission">Iniciar Missão</string>
 
     <string name="products">Produtos</string>
     <string name="filter">

@@ -18,8 +18,11 @@
     <string name="next" tools:ignore="MissingTranslation">Next</string>
     <string name="cpf" tools:ignore="MissingTranslation">CPF</string>
     <string name="contact" tools:ignore="MissingTranslation">Contact</string>
-    <string name="brand" tools:ignore="MissingTranslation">Brand</string>
+<!--    <string name="brand" tools:ignore="MissingTranslation">Brand</string>-->
+    <string name="group" tools:ignore="MissingTranslation">Group</string>
     <string name="email" tools:ignore="MissingTranslation">Email</string>
+    <string name="gender" tools:ignore="MissingTranslation">Gender</string>
+    <string name="dob" tools:ignore="MissingTranslation">Date of birth</string>
     <string name="confirmpassword" tools:ignore="MissingTranslation">Confirm Password</string>
     <string name="signup" tools:ignore="MissingTranslation">Sign up</string>
     <string name="already_have_an_account" tools:ignore="MissingTranslation">Already have an account?</string>
@@ -42,6 +45,7 @@
     <string name="view_more" tools:ignore="MissingTranslation">
         <u>View more</u>
     </string>
+
     <string name="available_points" tools:ignore="MissingTranslation">Available Points</string>
     <string name="pending_points" tools:ignore="MissingTranslation">Pending Points</string>
     <string name="points_earned" tools:ignore="MissingTranslation">Points Earned</string>
@@ -62,10 +66,11 @@
     <string name="close">
         <u>Close</u>
     </string>
+    <string name="questionnaire" tools:ignore="MissingTranslation">Kino Plastic Questionnaire</string>
     <string name="start_on">Start on:</string>
     <string name="name">Name:</string>
     <string name="end_on">End on:</string>
-    <string name="register_sales">Register sales</string>
+    <string name="start_mission">Start mission</string>
 
     <string name="products">Products</string>
     <string name="filter">Filter</string>
@@ -84,9 +89,9 @@
 
     <string name="privacy_policy">Privacy Policy</string>
 
-<!--    <string name="facebook_app_id">1605927482877197</string>-->
+    <!--    <string name="facebook_app_id">1605927482877197</string>-->
     <string name="facebook_app_id">703545090069096</string>
-<!--    <string name="fb_login_protocol_scheme">fb1605927482877197</string>-->
+    <!--    <string name="fb_login_protocol_scheme">fb1605927482877197</string>-->
     <string name="fb_login_protocol_scheme">fb703545090069096</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
@@ -146,4 +151,10 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+
+        <string-array name="Gender">
+            <item>Male</item>
+            <item>Female</item>
+            <item>Other</item>
+        </string-array>
 </resources>

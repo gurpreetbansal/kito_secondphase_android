@@ -13,6 +13,7 @@ import com.diggytech.kinoplasticpremios.Campaign.Products.ProductsActivity
 import com.diggytech.kinoplasticpremios.Constants
 import com.diggytech.kinoplasticpremios.R
 import com.diggytech.kinoplasticpremios.RegisterSale.RegisterSaleActivity
+import com.diggytech.kinoplasticpremios.StartMissionActivity
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlinx.android.synthetic.main.campaign_item.view.*
 import java.text.ParseException
@@ -54,7 +55,8 @@ class CampaignAdapter(val context: Activity, val list: List<ModelCampaign>) :
         {
             holder.btnRegisterSale.visibility=View.VISIBLE
             holder.btnRegisterSale.setOnClickListener {
-                val intent = Intent(context, RegisterSaleActivity::class.java)
+//                val intent = Intent(context, RegisterSaleActivity::class.java)
+                val intent = Intent(context, StartMissionActivity::class.java)
                 intent.putExtra("id", model.id)
                 context.startActivity(intent)
             }

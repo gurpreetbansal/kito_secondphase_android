@@ -61,7 +61,7 @@
 
                     <TextView
                             android:id="@+id/tvBrand"
-                            android:text="@string/brand"
+                            android:text="@string/group"
                             android:textColor="@color/colorPrimary"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>

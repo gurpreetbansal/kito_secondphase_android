@@ -1,6 +1,7 @@
 package com.diggytech.kinoplasticpremios
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -194,6 +195,78 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
                 }
             }
         }
+
+        //////////
+
+        v.genderSpinner.adapter = TypeOfUsersAdapter(
+            context!!,
+            listOf(
+                TypeOfUsers("Masculina"), TypeOfUsers("Fêmea")
+                , TypeOfUsers("De outros")
+            )
+        )
+
+
+        v.genderSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+            override fun onItemSelected(
+                parent: AdapterView<*>,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
+
+                if (position == 0) {
+                    selected_user_type = "1"
+                    Log.e("position", "position" + position)
+
+                } else if (position == 1) {
+                    selected_user_type = "2"
+                    Log.e("position", "position" + position)
+
+                } else if (position == 2) {
+                    selected_user_type = "3"
+                    Log.e("position", "position" + position)
+                }
+            }
+        }
+
+//        val gender =resources.getStringArray(R.array.Gender)
+//        val genderSpinner = v.findViewById<Spinner>(R.id.genderSpinner)
+//        if (genderSpinner != null){
+//            val adapter = ArrayAdapter(context,android.R.layout.simple_spinner_item,gender)
+//            genderSpinner.adapter = adapter
+//        }
+//
+//        genderSpinner.onItemSelectedListener = object :
+//        AdapterView.OnItemSelectedListener {
+//            override fun onNothingSelected(parent: AdapterView<*>?) {
+//                Log.e("UNSELECTED GENDER", "UnSelcet Gender")
+//            }
+//
+//            override fun onItemSelected(
+//                parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+//
+//                Log.e("SELECTED GENDER", "Selcet Gender")
+//                if (position == 0) {
+//                    selected_user_type = "1"
+//                    Log.e("position", "position" + position)
+//
+//                } else if (position == 1) {
+//                    selected_user_type = "2"
+//                    Log.e("position", "position" + position)
+//
+//                } else if (position == 2) {
+//                    selected_user_type = "3"
+//                    Log.e("position", "position" + position)
+//                }
+//
+//            }
+//        }
+
+
+
         BrandList()
 
         v.etcpf.addTextChangedListener(PhoneNumberTextWatcher(v.etcpf));

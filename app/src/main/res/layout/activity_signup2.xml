@@ -65,7 +65,7 @@
                             android:id="@+id/tvBrand"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/brand"
+                            android:text="@string/group"
                             android:textColor="@color/colorPrimary" />
 <!-- android:visibility="gone"-->
                     <Spinner
@@ -407,12 +407,93 @@ android:focusable="false"-->
                         android:textSize="18sp"
                         android:theme="@style/MyEditTextTheme" />
 
+<!--                My_edit-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/genderIC"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/etEmail"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/username" />
+
+                <TextView
+                    android:id="@+id/genderTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etEmail"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/ivEmail"
+                    android:text="@string/gender"
+                    android:textColor="@color/colorPrimary" />
+
+                <Spinner
+                    android:overlapAnchor="false"
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="@string/select_language"
+                    android:layout_below="@+id/genderTV"
+                    android:layout_toEndOf="@+id/ivEmail"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:hint="escolha o tipo de usuario"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_16sdp"
+                    android:theme="@style/MyEditTextTheme"
+                    tools:ignore="RtlCompat"
+                    android:layout_marginStart="2dp" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/dob_Ic"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/genderSpinner"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:actualImageScaleType="centerInside"
+                    app:placeholderImage="@drawable/username" />
+
+                <TextView
+                    android:id="@+id/dobText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/genderSpinner"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/ivEmail"
+                    android:text="@string/dob"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dob_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dobText"
+                    android:layout_toEndOf="@+id/ivEmail"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:hint="dd/mm/yyyy"
+                    android:imeOptions="actionDone"
+                    android:inputType="date"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:theme="@style/MyEditTextTheme" />
+
 
                 <com.facebook.drawee.view.SimpleDraweeView
                         android:id="@+id/ivPassword"
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:layout_below="@+id/etEmail"
+                        android:layout_below="@+id/dob_EditText"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="8dp"
@@ -424,7 +505,7 @@ android:focusable="false"-->
                         android:id="@+id/tvPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/etEmail"
+                        android:layout_below="@+id/dob_EditText"
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="16dp"
                         android:layout_toEndOf="@+id/ivEmail"
