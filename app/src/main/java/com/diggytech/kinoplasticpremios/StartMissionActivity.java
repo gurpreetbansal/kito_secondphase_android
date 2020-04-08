@@ -34,10 +34,8 @@ public class StartMissionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getWindow().requestFeature(Window.FEATURE_PROGRESS);
         setContentView(R.layout.activity_start_mission);
 
-//        getWindow().setFeatureInt(Window.FEATURE_PROGRESS, Window.PROGRESS_VISIBILITY_ON);
 
         webView = findViewById(R.id.startMission_webView);
         toolbar_title=findViewById(R.id.toolbar_title);
@@ -52,24 +50,32 @@ public class StartMissionActivity extends AppCompatActivity {
             }
         });
 
-        showWebPage();
-
-    }
-
-    private void showWebPage(){
-
+//        showWebPage();
         progressDialog = new ProgressDialog(StartMissionActivity.this);
-        progressDialog.setMessage("Loading website........");
+        progressDialog.setMessage("Loading Page........");
         progressDialog.setCanceledOnTouchOutside(false);
         webView.setWebViewClient(new ProgressDialogClass(progressDialog,getApplicationContext()));
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webView.loadUrl(url);
-        progressDialog.dismiss();
-
 
     }
+
+//    private void showWebPage(){
+//
+//        progressDialog = new ProgressDialog(StartMissionActivity.this);
+//        progressDialog.setMessage("Loading website........");
+//        progressDialog.setCanceledOnTouchOutside(false);
+//        webView.setWebViewClient(new ProgressDialogClass(progressDialog,getApplicationContext()));
+//        webView.getSettings().setLoadsImagesAutomatically(true);
+//        webView.getSettings().setJavaScriptEnabled(true);
+//        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+//        webView.loadUrl(url);
+//        progressDialog.dismiss();
+//
+//
+//    }
 
     public void showDialog() {
 

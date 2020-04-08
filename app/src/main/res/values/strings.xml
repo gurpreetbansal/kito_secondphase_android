@@ -103,6 +103,7 @@
     <string name="no_of_points">No. of points:</string>
     <string name="no_campaigns">No Campaigns</string>
     <string name="please_enter_email">Please enter your email.</string>
+    <string name="please_enter_dob">Please Enter your DOB.</string>
     <string name="enter_valid_email">Please enter valid email.</string>
     <string name="username">Full Name</string>
     <string name="location">Location</string>

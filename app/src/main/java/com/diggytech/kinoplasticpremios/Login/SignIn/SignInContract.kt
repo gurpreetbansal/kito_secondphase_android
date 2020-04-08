@@ -70,7 +70,9 @@ class SignInContract {
             @Field("email") email1: String,
             @Field("password") password1: String,
             @Field("social_type") socialType1: String,
-            @Field("social_id") socialId1: String
+            @Field("social_id") socialId1: String,
+            @Field("dob") dob :String,
+            @Field("gender") gender: String
         ): Call<ResponseBody>
 
 

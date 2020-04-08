@@ -12,6 +12,9 @@ public class SignUpRequest_ParentDataModel {
     private String username;
     private String user_type;
     private String cpf_number;
+    private String dob;
+    private String gender;
+
     private ArrayList<SignUpRequest_ChlidDataModel> user_Location = null;
 
 
@@ -35,9 +38,6 @@ public class SignUpRequest_ParentDataModel {
     public void setUser_Location(ArrayList<SignUpRequest_ChlidDataModel> user_Location) {
         this.user_Location = user_Location;
     }
-
-
-
 
 
     public String getEmail() {
@@ -120,11 +120,21 @@ public class SignUpRequest_ParentDataModel {
         this.fcmtoken = fcmtoken;
     }
 
+    public String getDob() {
+        return dob;
+    }
 
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
 
+    public String getGender() {
+        return gender;
+    }
 
-
-
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 //    {
 //        "email":"radha12@gmail.com",
 //            "phone_number":"+55123-45678-4548",

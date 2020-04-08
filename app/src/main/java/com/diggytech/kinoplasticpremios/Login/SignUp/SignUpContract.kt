@@ -23,6 +23,9 @@ class SignUpContract {
         fun getDeviceType(): String
         fun getDeviceToken(): String
 
+        fun getGender(): String
+        fun getDOB(): String
+
         fun getLocation(): String
         fun getLocationArray(locationsArray: ArrayList<SignUpRequest_ChlidDataModel>): ArrayList<SignUpRequest_ChlidDataModel>
 
@@ -65,6 +68,15 @@ class SignUpContract {
 //        fun saveBrandLocations(locations: MutableList<LocationsModel>)
 //        fun saveBrandCityLocations(locations: MutableList<LocationsModel>)
 //        fun saveAllLocations(locations: MutableList<LocationsModel>)
+    fun movetoscreen2(
+            username: String,
+            cpf: String,
+            contact: String,
+            image: File?,
+            user_type: String,
+            gender: String,
+            dob: String
+        )
     }
 
     interface Service {
@@ -87,7 +99,10 @@ class SignUpContract {
             @Part("city") city1: RequestBody,
             @Part("state") state1: RequestBody,
             @Part("fcmtoken") fcmtoken: RequestBody,
-            @Part("user_type") user_type: RequestBody
+            @Part("user_type") user_type: RequestBody,
+            @Part("dob") dob: RequestBody,
+            @Part("gender") gender: RequestBody
+
         ): Call<ResponseBody>
 /* @Part("user_Location[]") map: HashMap<String, RequestBody>,*/
         /*"email":"manojtesting1001@gmail.com",

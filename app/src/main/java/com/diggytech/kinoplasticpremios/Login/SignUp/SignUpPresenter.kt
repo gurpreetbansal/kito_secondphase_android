@@ -1,7 +1,5 @@
 package com.diggytech.kinoplasticpremios.Login.SignUp
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
 import com.diggytech.kinoplasticpremios.Constants
@@ -21,12 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import kotlin.collections.ArrayList
 import android.content.SharedPreferences
-import android.preference.PreferenceManager
-import android.widget.Toast
 import com.app.soyadeti.Interface.APIService
-import com.diggytech.kinoplasticpremios.DashBoard.DashBoardActivity
-import com.google.android.material.snackbar.Snackbar
-import java.util.HashMap
 
 
 class SignUpPresenter(val view: SignUpContract.View) {
@@ -54,6 +47,9 @@ class SignUpPresenter(val view: SignUpContract.View) {
         val contact = view.getContact()
         val image = view.getImageFile()
         val user_value = view.getUserType()
+        val gender = view.getGender()
+        val dob =view.getDOB()
+
 
 
         if (username.trim().isEmpty()) {
@@ -70,9 +66,9 @@ class SignUpPresenter(val view: SignUpContract.View) {
         }
 
         if (image == null) {
-            view.movetoscreen2(username, cpftwo, contact, null, user_value)
+            view.movetoscreen2(username, cpftwo, contact, null, user_value,gender,dob)
         } else {
-            view.movetoscreen2(username, cpftwo, contact, image, user_value)
+            view.movetoscreen2(username, cpftwo, contact, image, user_value,gender,dob)
         }
     }
 
@@ -82,7 +78,9 @@ class SignUpPresenter(val view: SignUpContract.View) {
         contact: String,
         image: File?,
         context: FragmentActivity?,
-        selectedUserType: String?
+        selectedUserType: String?,
+        selectedGenderType: String?,
+        dob: String
     ) {
         val device_type = view.getDeviceType()
         val device_token = view.getDeviceToken()
@@ -113,6 +111,10 @@ class SignUpPresenter(val view: SignUpContract.View) {
             view.showError(context!!.getString(R.string.enter_valid_email))
             return
         }
+        if (dob.trim().isEmpty()){
+            view.showError(context!!.getString(R.string.please_enter_dob))
+            return
+        }
 
         if (password.trim().isEmpty()) {
             view.showError(context!!.getString(R.string.please_enter_your_password))
@@ -133,7 +135,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         if (image == null) {
             callSignUpService(
                 device_type, device_token, username, cpf, contact, location, brand, email,
-                password, social_type, social_id, null, city, state, fcmtoken, selectedUserType.toString()
+                password, social_type, social_id, null, city, state, fcmtoken, selectedUserType.toString(),
+                selectedGenderType.toString(),dob
             )
         } else /*if (image != null  && selectedUserType==1 )*/ {
             callSignUpService(
@@ -152,7 +155,9 @@ class SignUpPresenter(val view: SignUpContract.View) {
                 city,
                 state,
                 fcmtoken,
-                selectedUserType.toString()
+                selectedUserType.toString(),
+                selectedGenderType.toString(),
+                dob
             )
         }
 //        /*foruser type 2 and 3*/
@@ -187,7 +192,9 @@ class SignUpPresenter(val view: SignUpContract.View) {
         city: String,
         state: String,
         fcmtoken: String,
-        selectedUserType: String
+        selectedUserType: String,
+        selectedGenderType: String?,
+        dob: String
     ) {
 
         view.showLoader()
@@ -215,11 +222,14 @@ class SignUpPresenter(val view: SignUpContract.View) {
         val state1 = RequestBody.create(MultipartBody.FORM, state)
         val fcmtoken = RequestBody.create(MultipartBody.FORM, fcmtoken)
         val user_type = RequestBody.create(MultipartBody.FORM, selectedUserType)
+        val gender = RequestBody.create(MultipartBody.FORM,selectedGenderType)
+        val dob = RequestBody.create(MultipartBody.FORM,dob)
 
         if (image != null) {
             call = service.callRegisterService(
                 deviceType1, deviceToken1, username1, cpf1, contact1, location1, brand1,
-                email1, password1, socialType1, socialId1, profile_pic, city1, state1, fcmtoken,user_type
+                email1, password1, socialType1, socialId1, profile_pic, city1, state1, fcmtoken,user_type,
+                gender,dob
             )
             Log.e("REGISTRATION_TOKEN", call.toString())
 
@@ -227,7 +237,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
             call = service.callRegisterService(
                 deviceType1, deviceToken1, username1, cpf1, contact1, location1, brand1, email1,
                 password1, socialType1, socialId1, null, city1, state1, fcmtoken
-            ,user_type)
+            ,user_type,gender,dob)
             Log.e("REGISTRATION_TOKEN", call.toString())
 
         }
@@ -269,8 +279,16 @@ class SignUpPresenter(val view: SignUpContract.View) {
 
 
     /*for user type two*/
-    fun getDetailsOfScreen2_UserType(username: String, cpf: String, contact: String, image: File?,
-        context: FragmentActivity?, selectedUserType: String) {
+    fun getDetailsOfScreen2_UserType(
+        username: String,
+        cpf: String,
+        contact: String,
+        image: File?,
+        context: FragmentActivity?,
+        selectedUserType: String,
+        selectedGenderType: String,
+        dob: String
+    ) {
 
         val device_type = view.getDeviceType()
         val device_token = view.getDeviceToken()

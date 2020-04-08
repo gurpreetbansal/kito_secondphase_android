@@ -142,7 +142,9 @@ class SignInPresenter(val view: SignInContract.View) {
         email: String,
         password: String,
         socialType: String,
-        socialId: String
+        socialId: String,
+        dob: String,
+        gender: String
     ) {
 
         view.showLoader()
@@ -160,7 +162,9 @@ class SignInPresenter(val view: SignInContract.View) {
             email,
             password,
             socialType,
-            socialId
+            socialId,
+            dob,
+            gender
         )
         call.enqueue(object : Callback<ResponseBody> {
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {

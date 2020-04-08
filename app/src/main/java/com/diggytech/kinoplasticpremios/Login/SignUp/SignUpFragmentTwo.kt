@@ -1,20 +1,15 @@
 package com.diggytech.kinoplasticpremios
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.media.MediaScannerConnection
 import android.net.Uri
-import android.os.Build
-import android.os.Bundle
-import android.os.Environment
+import android.os.*
 import android.provider.MediaStore
-import android.telephony.PhoneNumberUtils
 import android.text.Editable
-import android.text.Selection
 import android.text.TextWatcher
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
@@ -41,9 +36,6 @@ import kotlinx.android.synthetic.main.activity_signup2.*
 import kotlinx.android.synthetic.main.activity_signup2.view.*
 import kotlinx.android.synthetic.main.activity_signup2.view.txt_spinnerBrands
 import kotlinx.android.synthetic.main.fragment_sign_up.view.*
-import okhttp3.MediaType
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -55,7 +47,7 @@ import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 
-class SignUpFragmentTwo : Fragment(), SignUpContract.View {
+class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
 
     private val PICK_IMAGE_REQUEST = 1
@@ -94,6 +86,7 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
     private lateinit var btnSignUp: TextView
     private lateinit var et_funcao: TextView
     private lateinit var cpf_img: ImageView
+//    private lateinit var dob: String
     private lateinit var v: View
     private val GALLERY_IMAGE = 11
     private val CAMERA_IMAGE = 12
@@ -120,6 +113,7 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
 
     var spinner: Spinner? = null
     lateinit var selected_user_type: String
+    lateinit var selected_gender_type: String
 
     var selected_brand_name: String? = null
     var selected_state_name: String? = null
@@ -138,6 +132,7 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
     lateinit var select_location_id_two: String
 
     lateinit var final_value_cpf: String
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -151,6 +146,7 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
         cpf_img = v.findViewById(R.id.cpf_img)
         btnNext = v.findViewById(R.id.btnNext)
         btnSignUp = v.findViewById(R.id.btnSignUp)
+//        dob = v.findViewById(R.id.dob_EditText)
         //et_funcao = v.findViewById(R.id.et_funcao)
         signup1.visibility = View.VISIBLE
         signup2.visibility = View.GONE
@@ -218,53 +214,19 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
             ) {
 
                 if (position == 0) {
-                    selected_user_type = "1"
+                    selected_gender_type = "1"
                     Log.e("position", "position" + position)
 
                 } else if (position == 1) {
-                    selected_user_type = "2"
+                    selected_gender_type = "2"
                     Log.e("position", "position" + position)
 
                 } else if (position == 2) {
-                    selected_user_type = "3"
+                    selected_gender_type = "3"
                     Log.e("position", "position" + position)
                 }
             }
         }
-
-//        val gender =resources.getStringArray(R.array.Gender)
-//        val genderSpinner = v.findViewById<Spinner>(R.id.genderSpinner)
-//        if (genderSpinner != null){
-//            val adapter = ArrayAdapter(context,android.R.layout.simple_spinner_item,gender)
-//            genderSpinner.adapter = adapter
-//        }
-//
-//        genderSpinner.onItemSelectedListener = object :
-//        AdapterView.OnItemSelectedListener {
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//                Log.e("UNSELECTED GENDER", "UnSelcet Gender")
-//            }
-//
-//            override fun onItemSelected(
-//                parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//
-//                Log.e("SELECTED GENDER", "Selcet Gender")
-//                if (position == 0) {
-//                    selected_user_type = "1"
-//                    Log.e("position", "position" + position)
-//
-//                } else if (position == 1) {
-//                    selected_user_type = "2"
-//                    Log.e("position", "position" + position)
-//
-//                } else if (position == 2) {
-//                    selected_user_type = "3"
-//                    Log.e("position", "position" + position)
-//                }
-//
-//            }
-//        }
-
 
 
         BrandList()
@@ -384,13 +346,53 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
             signup2.visibility = View.GONE
         }
     }
+//
+//    override fun movetoscreen2(
+//        username: String,
+//        cpf: String,
+//        contact: String,
+//        image: File?,
+//        user_type: String
+//    ) {
+//        signup1.visibility = View.GONE
+//        signup2.visibility = View.VISIBLE
+//        btnSignUp.setOnClickListener {
+//            if (activity != null && isAdded) {
+//                if (user_type.equals("1")) {
+//                    mPresenter.getDetailsOfScreen2(
+//                        username,
+//                        cpf,
+//                        contact,
+//                        image,
+//                        activity,
+//                        selected_user_type,
+//                        selected_gender_type,
+//                        dob
+//                    )
+//                } else {
+//                    mPresenter.getDetailsOfScreen2_UserType(
+//                        username,
+//                        cpf,
+//                        contact,
+//                        image,
+//                        activity,
+//                        selected_user_type,
+//                        selected_gender_type,
+//                        dob
+//                    )
+//                }
+//            }
+//        }
+//    }
 
     override fun movetoscreen2(
         username: String,
         cpf: String,
         contact: String,
         image: File?,
-        user_type: String
+        user_type: String,
+        gender: String,
+        dob: String
     ) {
         signup1.visibility = View.GONE
         signup2.visibility = View.VISIBLE
@@ -403,7 +405,9 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
                         contact,
                         image,
                         activity,
-                        selected_user_type
+                        selected_user_type,
+                        selected_gender_type,
+                        dob
                     )
                 } else {
                     mPresenter.getDetailsOfScreen2_UserType(
@@ -412,11 +416,24 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
                         contact,
                         image,
                         activity,
-                        selected_user_type
+                        selected_user_type,
+                        selected_gender_type,
+                        dob
                     )
                 }
             }
         }
+
+    }
+
+    override fun movetoscreen2(
+        username: String,
+        cpf: String,
+        contact: String,
+        image: File?,
+        user_type_value: String
+    ) {
+        TODO("Not yet implemented")
     }
 //    override fun getUserId(): String {
 //        return v.etName.text.toString().trim()
@@ -468,6 +485,9 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
         }
     }
 
+
+
+
     override fun getDeviceType(): String {
         return Constants.DEVICE_TYPE
     }
@@ -477,6 +497,14 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
             return Constants.getDeviceId(activity!!)
         }
         return ""
+    }
+
+    override fun getGender(): String {
+        return selected_gender_type!!
+    }
+
+    override fun getDOB(): String {
+        return v.dob_EditText.text.toString().trim()
     }
 
 
@@ -619,6 +647,12 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
             Constants.getPrefs(activity!!)!!.edit()
                 .putString(Constants.USER_TYPE, data.optString("user_type")).apply()
 
+            Constants.getPrefs(activity!!)!!.edit()
+                .putString(Constants.GENDER, data.optString("gender")).apply()
+
+            Constants.getPrefs(activity!!)!!.edit()
+                .putString(Constants.DOB, data.optString("dob")).apply()
+
             Constants.getPrefs(activity!!)!!.edit().putBoolean(Constants.loggedIn, true).apply()
         }
 
@@ -649,6 +683,12 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
 
             Constants.getPrefs(activity!!)!!.edit()
                 .putString(Constants.USER_TYPE, data.optString("user_type")).apply()
+
+            Constants.getPrefs(activity!!)!!.edit()
+                .putString(Constants.GENDER, data.optString("gender")).apply()
+
+            Constants.getPrefs(activity!!)!!.edit()
+                .putString(Constants.DOB, data.optString("dob")).apply()
 
 
             Constants.getPrefs(activity!!)!!.edit().putBoolean(Constants.loggedIn, true).apply()
@@ -1301,55 +1341,5 @@ class SignUpFragmentTwo : Fragment(), SignUpContract.View {
     fun deleteText() {
 
     }
-
-//    fun UploadImageTwo() {
-//        mAPIService = APIService.ApiUtils.apiService
-//       showLoader()
-//        val image = imageFile
-//        var fileReqBody = RequestBody.create(MediaType.parse("image/*"), image);
-//        // Create MultipartBody.Part using file request-body,file name and part name
-//        var part = MultipartBody.Part.createFormData("profile_pic", image?.getName(), fileReqBody)
-//
-//
-//        var description2 = RequestBody.create(MediaType.parse("multipart/form-data"),user_id_multiple)
-//        Log.e("UPDATE_DATA","" + " " + part + description2 )
-//
-//        var map = HashMap<String, RequestBody>()
-//        map.put("userid", description2)
-//
-//
-//
-//        mAPIService!!.Update_Image(part, map).enqueue(object : Callback<UploadImageResponse> {
-//
-//            @SuppressLint("NewApi")
-//            override fun onResponse(
-//                call: Call<UploadImageResponse>,
-//                response: Response<UploadImageResponse>
-//            ) {
-//                view.hideLoader()
-//                if (response.isSuccessful()) {
-//
-//                    if (response.body()!!.code == 200)
-//                    {
-//                        Toast.makeText(context,response.body()!!.message,Toast.LENGTH_SHORT).show()
-//                    }
-//                    else {Toast.makeText(context,response.body()!!.message,Toast.LENGTH_SHORT).show()
-//                    }
-//                    // Toast.makeText(context,response.body()!!.message,Toast.LENGTH_SHORT).show()
-//
-//                }
-//                // Toast.makeText(context, response.body()?.message, Toast.LENGTH_SHORT).show()
-//            }
-//
-//
-//            override fun onFailure(call: Call<UploadImageResponse>, t: Throwable) {
-//                view.hideLoader()
-//                t.printStackTrace()
-//
-//            }
-//        })
-//
-//
-//    }
 
 }

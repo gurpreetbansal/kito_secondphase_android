@@ -285,6 +285,8 @@ class SignInFragment : Fragment(), SignInContract.View {
                 .apply()
             Constants.getPrefs(activity!!)!!.edit().putString(Constants.CITY, data.optString("city")).apply()
             Constants.getPrefs(activity!!)!!.edit().putString(Constants.USER_TYPE, data.optString("user_type")).apply()
+            Constants.getPrefs(activity!!)!!.edit().putString(Constants.GENDER, data.optString("gender")).apply()
+            Constants.getPrefs(activity!!)!!.edit().putString(Constants.DOB, data.optString("dob")).apply()
 
            // Constants.getPrefs(activity!!)!!.edit().putString(Constants.DEVICE_TYPE, data.optString("device_type")).apply()
            // Constants.getPrefs(activity!!)!!.edit().putString(Constants.DEVICE_TOKEN, data.optString("device_token")).apply()
@@ -398,8 +400,8 @@ class SignInFragment : Fragment(), SignInContract.View {
 
                         mPresenter.callSignUpService(
                             device_type, device_token, username, "", "", "", ""
-                            , email, "", social_type!!, facebookId
-                        )
+                            , email, "", social_type!!, facebookId,
+                        "","")
 
                     }
 
@@ -457,7 +459,7 @@ class SignInFragment : Fragment(), SignInContract.View {
 
             mPresenter.callSignUpService(
                 device_type, device_token, username, "", "", "", ""
-                , email!!, "", social_type!!, social_id!!
+                , email!!, "", social_type!!, social_id!!,"",""
             )
 
         } catch (e: ApiException) {
