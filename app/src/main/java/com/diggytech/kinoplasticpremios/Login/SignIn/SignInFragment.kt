@@ -400,8 +400,7 @@ class SignInFragment : Fragment(), SignInContract.View {
 
                         mPresenter.callSignUpService(
                             device_type, device_token, username, "", "", "", ""
-                            , email, "", social_type!!, facebookId,
-                        "","")
+                            , email, "", social_type!!, facebookId,"","")
 
                     }
 

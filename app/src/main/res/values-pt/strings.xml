@@ -25,6 +25,7 @@
     <string name="email">O email</string>
     <string name="gender">Gênero</string>
     <string name="dob">Data de nascimento</string>
+    <string name="dob_txt">dd/mm/aaaa</string>
     <string name="confirmpassword">Confirme a Senha</string>
     <string name="signup">inscrever-se</string>
     <string name="already_have_an_account">já tem uma conta??</string>

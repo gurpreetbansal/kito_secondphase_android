@@ -19,7 +19,7 @@ class SignUpContract {
         fun getContact(): String
         fun showError(message: String)
        // fun activity_value(message: String)
-        fun movetoscreen2(username: String, cpf: String, contact: String, image: File?,user_type_value: String)
+//        fun movetoscreen2(username: String, cpf: String, contact: String, image: File?,user_type_value: String)
         fun getDeviceType(): String
         fun getDeviceToken(): String
 
@@ -73,9 +73,9 @@ class SignUpContract {
             cpf: String,
             contact: String,
             image: File?,
-            user_type: String,
-            gender: String,
-            dob: String
+            user_type: String
+//            gender: String,
+//            dob: String
         )
     }
 

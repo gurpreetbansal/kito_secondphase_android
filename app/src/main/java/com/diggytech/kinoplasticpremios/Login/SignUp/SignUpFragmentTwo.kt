@@ -1,6 +1,7 @@
 package com.diggytech.kinoplasticpremios
 
 import android.annotation.SuppressLint
+import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -44,6 +45,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -86,7 +88,9 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
     private lateinit var btnSignUp: TextView
     private lateinit var et_funcao: TextView
     private lateinit var cpf_img: ImageView
-//    private lateinit var dob: String
+//    private lateinit var dob: TextInputEditText
+    private lateinit var dob: TextView
+    private lateinit var datePicker: DatePicker
     private lateinit var v: View
     private val GALLERY_IMAGE = 11
     private val CAMERA_IMAGE = 12
@@ -146,7 +150,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
         cpf_img = v.findViewById(R.id.cpf_img)
         btnNext = v.findViewById(R.id.btnNext)
         btnSignUp = v.findViewById(R.id.btnSignUp)
-//        dob = v.findViewById(R.id.dob_EditText)
+        dob = v.findViewById(R.id.dob_TextView)
         //et_funcao = v.findViewById(R.id.et_funcao)
         signup1.visibility = View.VISIBLE
         signup2.visibility = View.GONE
@@ -227,6 +231,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
                 }
             }
         }
+
 
 
         BrandList()
@@ -313,6 +318,43 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
         clickListeners()
 
+//        dob.text = SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis())
+
+        var cal = Calendar.getInstance()
+        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, monthOfYear)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            val myFormat = "dd/MM/yyyy" // mention the format you need
+            val sdf = SimpleDateFormat(myFormat, Locale.US)
+            dob.text = sdf.format(cal.time)
+
+        }
+
+        dob.setOnClickListener {
+            DatePickerDialog(activity, dateSetListener,
+                cal.get(Calendar.YEAR),
+                cal.get(Calendar.MONTH),
+                cal.get(Calendar.DAY_OF_MONTH)).show()
+        }
+
+//        dob.setOnClickListener(View.OnClickListener {
+//
+//            val calender = Calendar.getInstance()
+//            val year = calender.get(Calendar.YEAR)
+//            val month = calender.get(Calendar.MONTH)
+//            val day = calender.get(Calendar.DAY_OF_MONTH)
+//
+//            val dpd = DatePickerDialog(activity, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+//                // Display Selected date in Toast
+//                Toast.makeText(activity, """$dayOfMonth - ${monthOfYear + 1} - $year""", Toast.LENGTH_LONG).show()
+//
+//            }, year, month, day)
+//            dpd.show()
+//
+//        })
+
         return v
     }
 
@@ -345,6 +387,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
             signup1.visibility = View.VISIBLE
             signup2.visibility = View.GONE
         }
+
     }
 //
 //    override fun movetoscreen2(
@@ -385,14 +428,14 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 //        }
 //    }
 
+
+
     override fun movetoscreen2(
         username: String,
         cpf: String,
         contact: String,
         image: File?,
-        user_type: String,
-        gender: String,
-        dob: String
+        user_type: String
     ) {
         signup1.visibility = View.GONE
         signup2.visibility = View.VISIBLE
@@ -405,20 +448,17 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
                         contact,
                         image,
                         activity,
-                        selected_user_type,
-                        selected_gender_type,
-                        dob
+                        selected_user_type
                     )
-                } else {
+                }
+                else {
                     mPresenter.getDetailsOfScreen2_UserType(
                         username,
                         cpf,
                         contact,
                         image,
                         activity,
-                        selected_user_type,
-                        selected_gender_type,
-                        dob
+                        selected_user_type
                     )
                 }
             }
@@ -426,18 +466,6 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
     }
 
-    override fun movetoscreen2(
-        username: String,
-        cpf: String,
-        contact: String,
-        image: File?,
-        user_type_value: String
-    ) {
-        TODO("Not yet implemented")
-    }
-//    override fun getUserId(): String {
-//        return v.etName.text.toString().trim()
-//    }
 
     override fun getUserIdD(): String {
         if (activity != null && isAdded) {
@@ -486,8 +514,6 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
     }
 
 
-
-
     override fun getDeviceType(): String {
         return Constants.DEVICE_TYPE
     }
@@ -504,7 +530,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
     }
 
     override fun getDOB(): String {
-        return v.dob_EditText.text.toString().trim()
+        return dob.text.toString().trim()
     }
 
 
@@ -959,6 +985,16 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
 
     }
+
+//    override fun movetoscreen2(
+//        username: String,
+//        cpf: String,
+//        contact: String,
+//        image: File?,
+//        user_type: String
+//    ) {
+//
+//    }
 
 
     /*for brand*/

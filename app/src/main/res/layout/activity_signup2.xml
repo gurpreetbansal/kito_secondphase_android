@@ -474,16 +474,29 @@ android:focusable="false"-->
                     android:textColor="@color/colorPrimary" />
 
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/dob_EditText"
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/dob_EditText"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/dobText"-->
+<!--                    android:layout_toEndOf="@+id/ivEmail"-->
+<!--                    android:fontFamily="@font/proxima_nova_regular"-->
+<!--                    android:hint="dd/mm/yyyy"-->
+<!--                    android:imeOptions="actionDone"-->
+<!--                    android:inputType="date"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:theme="@style/MyEditTextTheme" /> -->
+
+                <TextView
+                    android:id="@+id/dob_TextView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
                     android:layout_below="@+id/dobText"
                     android:layout_toEndOf="@+id/ivEmail"
                     android:fontFamily="@font/proxima_nova_regular"
-                    android:hint="dd/mm/yyyy"
-                    android:imeOptions="actionDone"
-                    android:inputType="date"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:hint="@string/dob_txt"
                     android:textColor="@color/colorBlack"
                     android:textSize="18sp"
                     android:theme="@style/MyEditTextTheme" />
@@ -493,7 +506,7 @@ android:focusable="false"-->
                         android:id="@+id/ivPassword"
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:layout_below="@+id/dob_EditText"
+                        android:layout_below="@+id/dob_TextView"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="8dp"
@@ -505,7 +518,7 @@ android:focusable="false"-->
                         android:id="@+id/tvPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/dob_EditText"
+                        android:layout_below="@+id/dob_TextView"
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="16dp"
                         android:layout_toEndOf="@+id/ivEmail"

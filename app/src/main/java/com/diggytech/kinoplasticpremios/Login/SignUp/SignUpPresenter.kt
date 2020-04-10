@@ -47,8 +47,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         val contact = view.getContact()
         val image = view.getImageFile()
         val user_value = view.getUserType()
-        val gender = view.getGender()
-        val dob =view.getDOB()
+//        val gender = view.getGender()
+//        val dob =view.getDOB()
 
 
 
@@ -66,9 +66,9 @@ class SignUpPresenter(val view: SignUpContract.View) {
         }
 
         if (image == null) {
-            view.movetoscreen2(username, cpftwo, contact, null, user_value,gender,dob)
+            view.movetoscreen2(username, cpftwo, contact, null, user_value)
         } else {
-            view.movetoscreen2(username, cpftwo, contact, image, user_value,gender,dob)
+            view.movetoscreen2(username, cpftwo, contact, image, user_value)
         }
     }
 
@@ -78,9 +78,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
         contact: String,
         image: File?,
         context: FragmentActivity?,
-        selectedUserType: String?,
-        selectedGenderType: String?,
-        dob: String
+        selectedUserType: String?
     ) {
         val device_type = view.getDeviceType()
         val device_token = view.getDeviceToken()
@@ -92,6 +90,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         val password = view.getPassword()
         val confirm_password = view.getConfirmedPassword()
         val fcmtoken = view.gefcmtoken()
+        val gender = view.getGender()
+        val dob =view.getDOB()
 
 
         if (brand.trim().isEmpty()) {
@@ -136,7 +136,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
             callSignUpService(
                 device_type, device_token, username, cpf, contact, location, brand, email,
                 password, social_type, social_id, null, city, state, fcmtoken, selectedUserType.toString(),
-                selectedGenderType.toString(),dob
+                gender,dob
             )
         } else /*if (image != null  && selectedUserType==1 )*/ {
             callSignUpService(
@@ -156,8 +156,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
                 state,
                 fcmtoken,
                 selectedUserType.toString(),
-                selectedGenderType.toString(),
-                dob
+                gender,dob
             )
         }
 //        /*foruser type 2 and 3*/
@@ -193,7 +192,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
         state: String,
         fcmtoken: String,
         selectedUserType: String,
-        selectedGenderType: String?,
+        selectedGenderType: String,
         dob: String
     ) {
 
@@ -285,9 +284,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
         contact: String,
         image: File?,
         context: FragmentActivity?,
-        selectedUserType: String,
-        selectedGenderType: String,
-        dob: String
+        selectedUserType: String
     ) {
 
         val device_type = view.getDeviceType()
@@ -296,6 +293,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         val password = view.getPassword()
         val confirm_password = view.getConfirmedPassword()
         val fcmtoken = view.gefcmtoken()
+        val selectedGenderType = view.getGender()
+        val dob = view.getDOB()
 
         val getLocationArray = view.getLocationArray(ArrayList<SignUpRequest_ChlidDataModel>())
 
@@ -320,6 +319,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         parent_model_signup.user_type= selectedUserType.toString()
         parent_model_signup.username=username
         parent_model_signup.user_Location=selection_multiple_locations
+        parent_model_signup.gender=selectedGenderType.toString()
+        parent_model_signup.dob=dob
 
 
 
@@ -327,6 +328,12 @@ class SignUpPresenter(val view: SignUpContract.View) {
             view.showError(context!!.getString(R.string.please_enter_email))
             return
         }
+
+        if (dob.trim().isEmpty()){
+            view.showError(context!!.getString(R.string.please_enter_dob))
+            return
+        }
+
         if (!Constants.isEmailValid(email)) {
             view.showError(context!!.getString(R.string.enter_valid_email))
             return
@@ -346,7 +353,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
             return
         }
 
-        if ( selectedUserType.equals("2")||selectedUserType.equals("3"))
+        if ( selectedUserType.equals("1")||selectedUserType.equals("2")||selectedUserType.equals("3"))
         {
             Log.e("SENDING_DATA","SENDING_DATA"+parent_model_signup)
             //callSignUpServiceTwo()
@@ -361,7 +368,25 @@ class SignUpPresenter(val view: SignUpContract.View) {
 
 
         }
+
+        if ( selectedGenderType.equals("1")||selectedGenderType.equals("2")||selectedGenderType.equals("3"))
+        {
+            Log.e("SENDING_DATA","SENDING_DATA"+parent_model_signup)
+            //callSignUpServiceTwo()
+//            if (image == null) {
+//                callSignUpServiceTwo()
+//            }
+//            else {
+
+            callSignUpServiceTwo()
+
+            //   }
+
+
+        }
     }
+
+
 
     /*in case of user two and three*/
     private fun callSignUpServiceTwo()

@@ -23,6 +23,7 @@
     <string name="email" tools:ignore="MissingTranslation">Email</string>
     <string name="gender" tools:ignore="MissingTranslation">Gender</string>
     <string name="dob" tools:ignore="MissingTranslation">Date of birth</string>
+    <string name="dob_txt" tools:ignore="MissingTranslation">dd/mm/yyyy</string>
     <string name="confirmpassword" tools:ignore="MissingTranslation">Confirm Password</string>
     <string name="signup" tools:ignore="MissingTranslation">Sign up</string>
     <string name="already_have_an_account" tools:ignore="MissingTranslation">Already have an account?</string>

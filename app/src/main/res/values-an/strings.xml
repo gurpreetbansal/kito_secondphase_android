@@ -12,6 +12,7 @@
     <string name="email_or_cpf">E-mail ou CPF</string>
     <string name="password">Senha</string>
     <string name="please_enter_dob">Digite seu DOB.</string>
+    <string name="dob_txt">dd/mm/aaaa</string>
     <string name="don_t_have_an_account">Não tem uma conta?</string>
     <string name="by_signing_you_are_agreeing_to_the_terms_conditions_and_the_privacy_policy">
         Ao se inscrever, você concorda com o
