@@ -174,11 +174,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
         v.spinner_funcao.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}
-            override fun onItemSelected(
-                parent: AdapterView<*>,
-                view: View,
-                position: Int,
-                id: Long
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long
             ) {
 
                 if (position == 0) {
@@ -210,11 +206,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
         v.genderSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}
-            override fun onItemSelected(
-                parent: AdapterView<*>,
-                view: View,
-                position: Int,
-                id: Long
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long
             ) {
 
                 if (position == 0) {

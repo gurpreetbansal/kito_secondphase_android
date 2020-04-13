@@ -74,8 +74,6 @@ class SignUpContract {
             contact: String,
             image: File?,
             user_type: String
-//            gender: String,
-//            dob: String
         )
     }
 

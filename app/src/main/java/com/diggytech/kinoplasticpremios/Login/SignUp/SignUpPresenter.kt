@@ -228,7 +228,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
             call = service.callRegisterService(
                 deviceType1, deviceToken1, username1, cpf1, contact1, location1, brand1,
                 email1, password1, socialType1, socialId1, profile_pic, city1, state1, fcmtoken,user_type,
-                gender,dob
+                dob,gender
             )
             Log.e("REGISTRATION_TOKEN", call.toString())
 
@@ -236,7 +236,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
             call = service.callRegisterService(
                 deviceType1, deviceToken1, username1, cpf1, contact1, location1, brand1, email1,
                 password1, socialType1, socialId1, null, city1, state1, fcmtoken
-            ,user_type,gender,dob)
+            ,user_type,dob, gender)
             Log.e("REGISTRATION_TOKEN", call.toString())
 
         }
@@ -410,6 +410,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>)
             {
                 view.hideLoader()
+                Log.e("RESPONSE",""+response)
                 if (response.isSuccessful) {
                     val res = response.body()!!.string()
                     Log.e("THIRD_SECTION", response.body()!!.string())
