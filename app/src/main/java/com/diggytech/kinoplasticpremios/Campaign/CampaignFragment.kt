@@ -55,7 +55,7 @@ class CampaignFragment : Fragment(), CampaignContract.View {
 
         val mToolbar = v.findViewById<Toolbar>(R.id.toolbar)
         val mTitle = mToolbar.findViewById<TextView>(R.id.toolbar_title)
-        mTitle!!.text = getString(R.string.campaign)
+        mTitle!!.text = getString(R.string.mission)
 
         mAPIService = APIService.ApiUtils.apiService
 

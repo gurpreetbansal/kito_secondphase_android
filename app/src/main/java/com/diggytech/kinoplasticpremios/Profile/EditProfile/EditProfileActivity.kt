@@ -28,7 +28,6 @@ import com.diggytech.kinoplasticpremios.DashBoard.ProfileResponseUserLocation
 import com.diggytech.kinoplasticpremios.Login.SignUp.*
 import com.diggytech.kinoplasticpremios.Profile.CombineDataModelOfServer
 import com.diggytech.kinoplasticpremios.Profile.ViewProfile.ModelProfile
-import com.diggytech.kinoplasticpremios.SelectLocation.SelectLocationActivity
 import com.diggytech.kinoplasticpremios.model.LocationArryForUserTwo_Three
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.backends.pipeline.PipelineDraweeController
@@ -39,15 +38,10 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import jp.wasabeef.fresco.processors.BlurPostprocessor
-import kotlinx.android.synthetic.main.activity_dash_board.*
 import kotlinx.android.synthetic.main.activity_edit_profile.*
 import kotlinx.android.synthetic.main.activity_edit_profile.ivBack
 import kotlinx.android.synthetic.main.activity_edit_profile.ivImage
 import kotlinx.android.synthetic.main.activity_edit_profile.progressBar
-import kotlinx.android.synthetic.main.activity_products.*
-import kotlinx.android.synthetic.main.activity_signup2.*
-import kotlinx.android.synthetic.main.activity_signup2.view.*
-import kotlinx.android.synthetic.main.activity_view_profile.*
 import kotlinx.android.synthetic.main.edit_profile.etContact
 import kotlinx.android.synthetic.main.edit_profile.etEmail
 import kotlinx.android.synthetic.main.edit_profile.etName
@@ -57,8 +51,6 @@ import kotlinx.android.synthetic.main.edit_profile.etcpf
 //import kotlinx.android.synthetic.main.edit_profile.spinnerLocations
 //import kotlinx.android.synthetic.main.edit_profile.spinnerStates
 import kotlinx.android.synthetic.main.edit_profile_two.*
-import kotlinx.android.synthetic.main.edit_profile_two.contact
-import kotlinx.android.synthetic.main.edit_profile_two.email
 import kotlinx.android.synthetic.main.edit_profile_two.img_spinnerCities_edit
 import kotlinx.android.synthetic.main.edit_profile_two.img_spinnerLocations_edit
 import kotlinx.android.synthetic.main.edit_profile_two.img_spinnerStates_edit
@@ -66,12 +58,9 @@ import kotlinx.android.synthetic.main.edit_profile_two.spinnerBrands
 import kotlinx.android.synthetic.main.edit_profile_two.spinnerCities
 import kotlinx.android.synthetic.main.edit_profile_two.spinnerLocations
 import kotlinx.android.synthetic.main.edit_profile_two.spinnerStates
-import kotlinx.android.synthetic.main.edit_profile_two.tvBrand
 import kotlinx.android.synthetic.main.edit_profile_two.txt_spinnerCities_edit
 import kotlinx.android.synthetic.main.edit_profile_two.txt_spinnerLocations_edit
 import kotlinx.android.synthetic.main.edit_profile_two.txt_spinnerStates_edit
-import kotlinx.android.synthetic.main.fragment_my_space.*
-import kotlinx.android.synthetic.main.view_profile.*
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -1058,7 +1047,7 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
     fun LocationList(city: String, brand: String, user_type: String) {
         showLoader()
 
-        var get_client_request = LocationListRequest(city!!, brand!!, user_type)
+        var get_client_request = LocationListRequest(city!!, brand!!)
         Log.e("get_client_location", "get_client_request" + get_client_request)
 
         //  mAPIService!!.Update_Profile(auto_token,user_id,part,name,location).enqueue(object : Callback<UpdateProfileResponse> {

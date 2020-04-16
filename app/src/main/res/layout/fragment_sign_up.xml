@@ -88,66 +88,66 @@
                     android:theme="@style/MyEditTextTheme" />
 
                 <!--secod-->
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/iv_funcao"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_below="@+id/etName"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:src="@drawable/lock"
-                    app:actualImageScaleType="centerInside"
-                    app:placeholderImage="@drawable/username" />
-                <TextView
-                    android:id="@+id/tv_funcao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/etName"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_toEndOf="@+id/ivCpf"
-                    android:text="@string/funcao"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/_13sdp" />
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_funcao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_funcao"
-                    android:layout_toEndOf="@+id/iv_funcao"
-                    android:fontFamily="@font/proxima_nova_regular"
-                    android:hint="escolha o tipo de usuario"
-                    android:imeOptions="actionDone"
-                    android:inputType="number"
-                    android:maxLength="14"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="@dimen/_16sdp"
-                    android:theme="@style/MyEditTextTheme"
-                    tools:ignore="RtlCompat"
-                    android:layout_marginStart="2dp"
-                   android:visibility="gone" />
-                <Spinner
+<!--                <com.facebook.drawee.view.SimpleDraweeView-->
+<!--                    android:id="@+id/iv_funcao"-->
+<!--                    android:layout_width="16dp"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:layout_below="@+id/etName"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:src="@drawable/lock"-->
+<!--                    app:actualImageScaleType="centerInside"-->
+<!--                    app:placeholderImage="@drawable/username" />-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_funcao"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/etName"-->
+<!--                    android:layout_marginStart="2dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_toEndOf="@+id/ivCpf"-->
+<!--                    android:text="@string/funcao"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:textSize="@dimen/_13sdp" />-->
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/et_funcao"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/tv_funcao"-->
+<!--                    android:layout_toEndOf="@+id/iv_funcao"-->
+<!--                    android:fontFamily="@font/proxima_nova_regular"-->
+<!--                    android:hint="escolha o tipo de usuario"-->
+<!--                    android:imeOptions="actionDone"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="14"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="@dimen/_16sdp"-->
+<!--                    android:theme="@style/MyEditTextTheme"-->
+<!--                    tools:ignore="RtlCompat"-->
+<!--                    android:layout_marginStart="2dp"-->
+<!--                   android:visibility="gone" />-->
+<!--                <Spinner-->
 
-                    android:overlapAnchor="false"
-                    android:id="@+id/spinner_funcao"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_35sdp"
-                    android:text="@string/select_language"
-                    android:layout_below="@+id/tv_funcao"
-                    android:layout_toEndOf="@+id/iv_funcao"
-                    android:fontFamily="@font/proxima_nova_regular"
-                    android:hint="escolha o tipo de usuario"
-                    android:imeOptions="actionDone"
-                    android:inputType="number"
-                    android:maxLength="14"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="@dimen/_16sdp"
-                    android:theme="@style/MyEditTextTheme"
-                    tools:ignore="RtlCompat"
-                    android:layout_marginStart="2dp"
-                    />
+<!--                    android:overlapAnchor="false"-->
+<!--                    android:id="@+id/spinner_funcao"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/_35sdp"-->
+<!--                    android:text="@string/select_language"-->
+<!--                    android:layout_below="@+id/tv_funcao"-->
+<!--                    android:layout_toEndOf="@+id/iv_funcao"-->
+<!--                    android:fontFamily="@font/proxima_nova_regular"-->
+<!--                    android:hint="escolha o tipo de usuario"-->
+<!--                    android:imeOptions="actionDone"-->
+<!--                    android:inputType="number"-->
+<!--                    android:maxLength="14"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    android:textSize="@dimen/_16sdp"-->
+<!--                    android:theme="@style/MyEditTextTheme"-->
+<!--                    tools:ignore="RtlCompat"-->
+<!--                    android:layout_marginStart="2dp"-->
+<!--                    />-->
                 <!--secod-->
 
                 <!--third-->
@@ -155,7 +155,7 @@
                     android:id="@+id/ivCpf"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
-                    android:layout_below="@+id/et_funcao"
+                    android:layout_below="@+id/etName"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="8dp"
@@ -167,7 +167,7 @@
                     android:id="@+id/tvCpf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/et_funcao"
+                    android:layout_below="@+id/etName"
                     android:layout_marginStart="2dp"
                     android:layout_marginTop="40dp"
                     android:layout_toEndOf="@+id/ivCpf"

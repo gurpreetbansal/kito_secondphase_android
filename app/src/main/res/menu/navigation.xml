@@ -9,7 +9,7 @@
     <item
             android:id="@+id/campaign"
             android:icon="@drawable/nav_campaign"
-            android:title="@string/campaign"/>
+            android:title="@string/mission"/>
 
     <item
             android:id="@+id/redeemPrizes"

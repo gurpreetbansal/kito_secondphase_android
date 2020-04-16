@@ -9,7 +9,7 @@
 
     <Spinner
             android:overlapAnchor="false"
-android:background="@null"
+            android:background="@null"
             android:id="@+id/languageSpinner"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_35sdp"

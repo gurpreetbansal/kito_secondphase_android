@@ -59,7 +59,7 @@ class SignUpContract {
 
         fun getCity(): String
         fun getState(): String
-        fun getUserType(): String
+//        fun getUserType(): String
         fun validcpf()
 
 

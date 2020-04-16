@@ -27,6 +27,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
     private var call: Call<ResponseBody>? = null
     private var profile_pic: MultipartBody.Part? = null
     private var myPreferences = "myPrefs"
+    private var user_types = "1"
     var selection_multiple_locations = ArrayList<SignUpRequest_ChlidDataModel>();
     val parts = ArrayList<RequestBody>()
     var parent_model_signup =SignUpRequest_ParentDataModel()
@@ -46,7 +47,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         val cpftwo = view.getCpfTwo()
         val contact = view.getContact()
         val image = view.getImageFile()
-        val user_value = view.getUserType()
+//        val user_value = view.getUserType()
+        val user_value = "1"
 //        val gender = view.getGender()
 //        val dob =view.getDOB()
 
@@ -77,8 +79,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         cpf: String,
         contact: String,
         image: File?,
-        context: FragmentActivity?,
-        selectedUserType: String?
+        context: FragmentActivity?
+//        selectedUserType: String?
     ) {
         val device_type = view.getDeviceType()
         val device_token = view.getDeviceToken()
@@ -135,7 +137,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         if (image == null) {
             callSignUpService(
                 device_type, device_token, username, cpf, contact, location, brand, email,
-                password, social_type, social_id, null, city, state, fcmtoken, selectedUserType.toString(),
+                password, social_type, social_id, null, city, state, fcmtoken,
+//                selectedUserType.toString(),
                 gender,dob
             )
         } else /*if (image != null  && selectedUserType==1 )*/ {
@@ -155,7 +158,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
                 city,
                 state,
                 fcmtoken,
-                selectedUserType.toString(),
+//                selectedUserType.toString(),
                 gender,dob
             )
         }
@@ -191,7 +194,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
         city: String,
         state: String,
         fcmtoken: String,
-        selectedUserType: String,
+//        selectedUserType: String,
         selectedGenderType: String,
         dob: String
     ) {
@@ -220,7 +223,7 @@ class SignUpPresenter(val view: SignUpContract.View) {
         val city1 = RequestBody.create(MultipartBody.FORM, city)
         val state1 = RequestBody.create(MultipartBody.FORM, state)
         val fcmtoken = RequestBody.create(MultipartBody.FORM, fcmtoken)
-        val user_type = RequestBody.create(MultipartBody.FORM, selectedUserType)
+        val user_type = RequestBody.create(MultipartBody.FORM, user_types)
         val gender = RequestBody.create(MultipartBody.FORM,selectedGenderType)
         val dob = RequestBody.create(MultipartBody.FORM,dob)
 
@@ -283,8 +286,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         cpf: String,
         contact: String,
         image: File?,
-        context: FragmentActivity?,
-        selectedUserType: String
+        context: FragmentActivity?
+//        selectedUserType: String
     ) {
 
         val device_type = view.getDeviceType()
@@ -316,7 +319,8 @@ class SignUpPresenter(val view: SignUpContract.View) {
         parent_model_signup.password=password
         parent_model_signup.phone_number=contact
         parent_model_signup.profile_pic= image
-        parent_model_signup.user_type= selectedUserType.toString()
+//        parent_model_signup.user_type= selectedUserType.toString()
+        parent_model_signup.user_type= user_types
         parent_model_signup.username=username
         parent_model_signup.user_Location=selection_multiple_locations
         parent_model_signup.gender=selectedGenderType.toString()
@@ -353,21 +357,21 @@ class SignUpPresenter(val view: SignUpContract.View) {
             return
         }
 
-        if ( selectedUserType.equals("1")||selectedUserType.equals("2")||selectedUserType.equals("3"))
-        {
-            Log.e("SENDING_DATA","SENDING_DATA"+parent_model_signup)
-            //callSignUpServiceTwo()
-//            if (image == null) {
+//        if ( selectedUserType.equals("1")||selectedUserType.equals("2")||selectedUserType.equals("3"))
+//        {
+//            Log.e("SENDING_DATA","SENDING_DATA"+parent_model_signup)
+//            //callSignUpServiceTwo()
+////            if (image == null) {
+////                callSignUpServiceTwo()
+////            }
+////            else {
+//
 //                callSignUpServiceTwo()
-//            }
-//            else {
-
-                callSignUpServiceTwo()
-
-         //   }
-
-
-        }
+//
+//         //   }
+//
+//
+//        }
 
         if ( selectedGenderType.equals("1")||selectedGenderType.equals("2")||selectedGenderType.equals("3"))
         {

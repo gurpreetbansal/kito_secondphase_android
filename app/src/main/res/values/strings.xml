@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Kitoplastic</string>
+    <string name="app_name">Conselho fashion</string>
+<!--    <string name="app_name">Kitoplastic</string>-->
     <string name="login" translatable="false">Login</string>
     <string name="register" translatable="false">Register</string>
 
@@ -37,7 +38,7 @@
 
     <string name="settings" tools:ignore="MissingTranslation">Settings</string>
     <string name="my_space" tools:ignore="MissingTranslation">My Space</string>
-    <string name="campaign" tools:ignore="MissingTranslation">Campaign</string>
+    <string name="mission" tools:ignore="MissingTranslation">Mission</string>
     <string name="redeem_prizes" tools:ignore="MissingTranslation">Redeem Prizes</string>
 
     <string name="notification_two" tools:ignore="MissingTranslation">Newsletter</string>

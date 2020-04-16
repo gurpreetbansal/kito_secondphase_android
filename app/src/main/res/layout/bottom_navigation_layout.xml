@@ -54,7 +54,7 @@
 
         <TextView
                 android:id="@+id/tvCampaign"
-                android:text="@string/campaign"
+                android:text="@string/mission"
                 android:textColor="@color/colorWhite"
                 android:layout_width="match_parent"
                 android:gravity="center"

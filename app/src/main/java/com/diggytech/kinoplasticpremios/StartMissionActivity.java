@@ -13,6 +13,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.diggytech.kinoplasticpremios.Campaign.ProgressDialogClass;
 import com.diggytech.kinoplasticpremios.MySpace.MySpaceContract;
@@ -28,7 +29,7 @@ public class StartMissionActivity extends AppCompatActivity {
     private TextView toolbar_title;
     private ImageView backImage;
 
-    boolean check;
+    boolean clicked;
 
     String url = "https://joootvio1.typeform.com/to/q26dMO";
     @Override
@@ -51,14 +52,17 @@ public class StartMissionActivity extends AppCompatActivity {
         });
 
 //        showWebPage();
-        progressDialog = new ProgressDialog(StartMissionActivity.this);
-        progressDialog.setMessage("Loading Page........");
-        progressDialog.setCanceledOnTouchOutside(false);
-        webView.setWebViewClient(new ProgressDialogClass(progressDialog,getApplicationContext()));
-        webView.getSettings().setLoadsImagesAutomatically(true);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        webView.loadUrl(url);
+
+
+            progressDialog = new ProgressDialog(StartMissionActivity.this);
+            progressDialog.setMessage("Loading Page........");
+            progressDialog.setCanceledOnTouchOutside(false);
+            webView.setWebViewClient(new ProgressDialogClass(progressDialog,getApplicationContext()));
+            webView.getSettings().setLoadsImagesAutomatically(true);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+            webView.loadUrl(url);
+
 
     }
 

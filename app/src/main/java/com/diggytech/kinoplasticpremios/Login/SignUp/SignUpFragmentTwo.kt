@@ -116,7 +116,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
     var languages = arrayOf("English", "French")
 
     var spinner: Spinner? = null
-    lateinit var selected_user_type: String
+//    lateinit var selected_user_type: String
     lateinit var selected_gender_type: String
 
     var selected_brand_name: String? = null
@@ -162,35 +162,35 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
         v.txt_spinnerBrands.text.toString().trim()
 
 
-        v.spinner_funcao.adapter = TypeOfUsersAdapter(
-            context!!,
-            listOf(
-                TypeOfUsers("Vendedor"), TypeOfUsers("Comprador")
-                , TypeOfUsers("gerente")
-            )
-        )
-
-
-        v.spinner_funcao.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {}
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long
-            ) {
-
-                if (position == 0) {
-                    selected_user_type = "1"
-                    Log.e("position", "position" + position)
-
-                } else if (position == 1) {
-                    selected_user_type = "2"
-                    Log.e("position", "position" + position)
-
-                } else if (position == 2) {
-                    selected_user_type = "3"
-                    Log.e("position", "position" + position)
-                }
-            }
-        }
+//        v.spinner_funcao.adapter = TypeOfUsersAdapter(
+//            context!!,
+//            listOf(
+//                TypeOfUsers("Vendedor"), TypeOfUsers("Comprador")
+//                , TypeOfUsers("gerente")
+//            )
+//        )
+//
+//
+//        v.spinner_funcao.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//
+//            override fun onNothingSelected(parent: AdapterView<*>?) {}
+//            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long
+//            ) {
+//
+//                if (position == 0) {
+//                    selected_user_type = "1"
+//                    Log.e("position", "position" + position)
+//
+//                } else if (position == 1) {
+//                    selected_user_type = "2"
+//                    Log.e("position", "position" + position)
+//
+//                } else if (position == 2) {
+//                    selected_user_type = "3"
+//                    Log.e("position", "position" + position)
+//                }
+//            }
+//        }
 
         //////////
 
@@ -439,8 +439,8 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
                         cpf,
                         contact,
                         image,
-                        activity,
-                        selected_user_type
+                        activity
+//                        selected_user_type
                     )
                 }
                 else {
@@ -449,8 +449,8 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
                         cpf,
                         contact,
                         image,
-                        activity,
-                        selected_user_type
+                        activity
+//                        selected_user_type
                     )
                 }
             }
@@ -471,10 +471,10 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
         return v.etName.text.toString().trim()
     }
 
-    override fun getUserType(): String {
-        //selected_user_type
-        return selected_user_type!!
-    }
+//    override fun getUserType(): String {
+//        //selected_user_type
+//        return selected_user_type!!
+//    }
 
     override fun getCpfTwo(): String {
         val sharedPreferences = context?.getSharedPreferences(myPreferences, Context.MODE_PRIVATE)
@@ -1210,8 +1210,8 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
                                         LocationList(
                                             select_city_name_two,
-                                            select_brand_name_two,
-                                            selected_user_type
+                                            select_brand_name_two
+//                                            selected_user_type
                                         )
                                     }
                                 }
@@ -1239,10 +1239,12 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
     }
 
     /*for location*/
-    fun LocationList(city: String, brand: String, user_type: String) {
+//    fun LocationList(city: String, brand: String, user_type: String) {
+    fun LocationList(city: String, brand: String) {
         showLoader()
 
-        var get_client_request = LocationListRequest(city!!, brand!!, user_type)
+//        var get_client_request = LocationListRequest(city!!, brand!!, user_type)
+        var get_client_request = LocationListRequest(city!!, brand!!)
         Log.e("get_client_location", "get_client_request" + get_client_request)
 
         //  mAPIService!!.Update_Profile(auto_token,user_id,part,name,location).enqueue(object : Callback<UpdateProfileResponse> {
@@ -1294,7 +1296,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
                                         Log.e("HI", "HI" + position)
                                     } else {
-                                        if (selected_user_type != "1") {
+//                                        if (selected_user_type != "1") {
                                             if (selected_location_status.equals("0")) {
 
                                                 Log.e("HI", "HI" + position)
@@ -1349,12 +1351,13 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
                             .show()
                     }
 
-                } else {
-                    // Toast.makeText(context,response.body()!!.message, Toast.LENGTH_SHORT).show()
                 }
+//            else {
+//                    // Toast.makeText(context,response.body()!!.message, Toast.LENGTH_SHORT).show()
+//                }
 
 
-            }
+//            }
 
             override fun onFailure(call: Call<LocationListResponse>, t: Throwable) {
                 hideLoader()

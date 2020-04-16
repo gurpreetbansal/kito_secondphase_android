@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kitoplastic</string>
+    <string name="app_name">Conselho fashion</string>
+<!--    <string name="app_name">Kitoplastic</string>-->
     <string name="login">Entrar</string>
     <string name="register">cadastrar-se</string>
 
@@ -39,7 +40,7 @@
     <string name="notification_two">Novidades</string>
     <string name="support">Suporte</string>
     <string name="my_space">Meu espaço</string>
-    <string name="campaign">Campanhas</string>
+    <string name="mission">Missão</string>
 <!--    <string name="redeem_prizes">Resgate de prêmios</string>-->
     <string name="redeem_prizes">Resgatar</string>
 <!--    <string name="support">Apoio, suporte</string>-->
