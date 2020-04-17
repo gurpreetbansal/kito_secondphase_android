@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#006989</color>
-    <color name="colorPrimaryDark">#1c466b</color>
+<!--    <color name="colorPrimary">#006989</color>-->
+    <color name="colorPrimary">#0098cf</color>
+<!--    <color name="colorPrimaryDark">#1c466b</color>-->
+    <color name="colorPrimaryDark">#007fad</color>
     <color name="colorAccent">#ffc700</color>
 
     <color name="colorWhite">#FFFFFF</color>
@@ -16,7 +18,8 @@
     <color name="colorRed">#ff2802</color>
     <color name="colorBlueLight">#B1F7F7</color>
     <color name="colorLightBlueBack">#D6FBFF</color>
-    <color name="colorBlueApp">#1c466b</color>
+<!--    <color name="colorBlueApp">#1c466b</color>-->
+    <color name="colorBlueApp">#007fad</color>
     <color name="colorPlaceholder">#CBE2FA</color>
     <color name="colorTextBlue">#00A7D1</color>
     <color name="colorGreen">#52934D</color>
