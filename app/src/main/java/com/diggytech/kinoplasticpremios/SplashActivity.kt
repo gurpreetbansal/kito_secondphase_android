@@ -44,6 +44,7 @@ class SplashActivity : AppCompatActivity() {
                })
 */
 
+
         loggedIn = Constants.getPrefs(this)!!.getBoolean(Constants.loggedIn, false)
       //  val language = Constants.getPrefs(this)!!.getString(Constants.LANGUAGE, "English")
        // val country = Constants.getPrefs(this)!!.getString(Constants.COUNTRY, "en")

@@ -37,7 +37,6 @@ public class StartMissionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_mission);
 
-
         webView = findViewById(R.id.startMission_webView);
         toolbar_title=findViewById(R.id.toolbar_title);
         backImage=findViewById(R.id.startMission_backImage);
