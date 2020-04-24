@@ -1296,7 +1296,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
                                         Log.e("HI", "HI" + position)
                                     } else {
-//                                        if (selected_user_type != "1") {
+                                        if (selected_gender_type != "1") {
                                             if (selected_location_status.equals("0")) {
 
                                                 Log.e("HI", "HI" + position)
@@ -1352,12 +1352,12 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
                     }
 
                 }
-//            else {
-//                    // Toast.makeText(context,response.body()!!.message, Toast.LENGTH_SHORT).show()
-//                }
+            else {
+                    // Toast.makeText(context,response.body()!!.message, Toast.LENGTH_SHORT).show()
+                }
 
 
-//            }
+            }
 
             override fun onFailure(call: Call<LocationListResponse>, t: Throwable) {
                 hideLoader()
