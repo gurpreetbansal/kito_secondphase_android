@@ -381,44 +381,6 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
         }
 
     }
-//
-//    override fun movetoscreen2(
-//        username: String,
-//        cpf: String,
-//        contact: String,
-//        image: File?,
-//        user_type: String
-//    ) {
-//        signup1.visibility = View.GONE
-//        signup2.visibility = View.VISIBLE
-//        btnSignUp.setOnClickListener {
-//            if (activity != null && isAdded) {
-//                if (user_type.equals("1")) {
-//                    mPresenter.getDetailsOfScreen2(
-//                        username,
-//                        cpf,
-//                        contact,
-//                        image,
-//                        activity,
-//                        selected_user_type,
-//                        selected_gender_type,
-//                        dob
-//                    )
-//                } else {
-//                    mPresenter.getDetailsOfScreen2_UserType(
-//                        username,
-//                        cpf,
-//                        contact,
-//                        image,
-//                        activity,
-//                        selected_user_type,
-//                        selected_gender_type,
-//                        dob
-//                    )
-//                }
-//            }
-//        }
-//    }
 
 
 
@@ -539,6 +501,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
             selection_multiple_locations.add(model);
             Log.e("SELECTED_POSITION4", selection_multiple_locations.size.toString())
         }
+//        return selection_multiple_locations
         return selection_multiple_locations
     }
 
@@ -554,7 +517,6 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 //          selected_location_name_two
 //        }
         return select_brand_name_two!!
-
     }
 
     override fun getState(): String {
@@ -568,7 +530,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 //
 //
 //        }
-        return select_state_name_two
+        return select_state_name_two!!
 
     }
 
