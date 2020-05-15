@@ -269,6 +269,8 @@ class CampaignFragment : Fragment(), CampaignContract.View {
         })
     }
 
+//    campaign/getLocationCampaigns
+
 
 
 }

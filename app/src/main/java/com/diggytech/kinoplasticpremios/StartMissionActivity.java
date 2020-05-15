@@ -41,7 +41,7 @@ public class StartMissionActivity extends AppCompatActivity {
         toolbar_title=findViewById(R.id.toolbar_title);
         backImage=findViewById(R.id.startMission_backImage);
 
-        toolbar_title.setText(getString(R.string.questionnaire));
+        toolbar_title.setText(getString(R.string.app_name));
 
         backImage.setOnClickListener(new View.OnClickListener() {
             @Override
