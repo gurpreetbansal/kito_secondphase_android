@@ -1,5 +1,9 @@
 package com.diggytech.kinoplasticpremios.Profile.EditProfile
 
+//import kotlinx.android.synthetic.main.edit_profile.spinnerBrands
+//import kotlinx.android.synthetic.main.edit_profile.spinnerCities
+//import kotlinx.android.synthetic.main.edit_profile.spinnerLocations
+//import kotlinx.android.synthetic.main.edit_profile.spinnerStates
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
@@ -11,23 +15,26 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
-import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.soyadeti.Interface.APIService
 import com.bumptech.glide.Glide
-import com.diggytech.kinoplasticpremios.*
+import com.diggytech.kinoplasticpremios.Constants
 import com.diggytech.kinoplasticpremios.DashBoard.ProfileResponse
 import com.diggytech.kinoplasticpremios.DashBoard.ProfileResponseUserLocation
+import com.diggytech.kinoplasticpremios.ImageFilePath
+import com.diggytech.kinoplasticpremios.LocationsModel
 import com.diggytech.kinoplasticpremios.Login.SignUp.*
 import com.diggytech.kinoplasticpremios.Profile.CombineDataModelOfServer
 import com.diggytech.kinoplasticpremios.Profile.ViewProfile.ModelProfile
+import com.diggytech.kinoplasticpremios.R
 import com.diggytech.kinoplasticpremios.model.LocationArryForUserTwo_Three
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.facebook.drawee.backends.pipeline.PipelineDraweeController
@@ -37,30 +44,15 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
 import jp.wasabeef.fresco.processors.BlurPostprocessor
 import kotlinx.android.synthetic.main.activity_edit_profile.*
-import kotlinx.android.synthetic.main.activity_edit_profile.ivBack
-import kotlinx.android.synthetic.main.activity_edit_profile.ivImage
-import kotlinx.android.synthetic.main.activity_edit_profile.progressBar
 import kotlinx.android.synthetic.main.edit_profile.etContact
 import kotlinx.android.synthetic.main.edit_profile.etEmail
 import kotlinx.android.synthetic.main.edit_profile.etName
 import kotlinx.android.synthetic.main.edit_profile.etcpf
-//import kotlinx.android.synthetic.main.edit_profile.spinnerBrands
-//import kotlinx.android.synthetic.main.edit_profile.spinnerCities
-//import kotlinx.android.synthetic.main.edit_profile.spinnerLocations
-//import kotlinx.android.synthetic.main.edit_profile.spinnerStates
 import kotlinx.android.synthetic.main.edit_profile_two.*
-import kotlinx.android.synthetic.main.edit_profile_two.img_spinnerCities_edit
-import kotlinx.android.synthetic.main.edit_profile_two.img_spinnerLocations_edit
-import kotlinx.android.synthetic.main.edit_profile_two.img_spinnerStates_edit
-import kotlinx.android.synthetic.main.edit_profile_two.spinnerBrands
-import kotlinx.android.synthetic.main.edit_profile_two.spinnerCities
-import kotlinx.android.synthetic.main.edit_profile_two.spinnerLocations
-import kotlinx.android.synthetic.main.edit_profile_two.spinnerStates
-import kotlinx.android.synthetic.main.edit_profile_two.txt_spinnerCities_edit
-import kotlinx.android.synthetic.main.edit_profile_two.txt_spinnerLocations_edit
-import kotlinx.android.synthetic.main.edit_profile_two.txt_spinnerStates_edit
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -253,7 +245,10 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
 
 
         ivCamera.setOnClickListener {
-            showPictureDialog()
+            CropImage.activity()
+                .setGuidelines(CropImageView.Guidelines.ON)
+                .start(this)
+            //showPictureDialog()
         }
     }
 
@@ -542,6 +537,39 @@ class EditProfileActivity : AppCompatActivity(), EditProfileContract.View {
                 imageFile = File(idProofUri)
                 imageFile = Constants.saveBitmapToFile(imageFile!!)
 
+            }
+        }
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            val result = CropImage.getActivityResult(data)
+            if (resultCode == RESULT_OK) {
+                val selectedImageUri = result.uri
+
+                ivImage.visibility = View.VISIBLE
+                ivImage.setImageURI(selectedImageUri)
+
+                hideLoader()
+                // blurred image
+                val postprocessor = BlurPostprocessor(this, 10)
+                val imageRequest =
+                    ImageRequestBuilder.newBuilderWithSource(selectedImageUri)
+                        .setPostprocessor(postprocessor)
+                        .build()
+
+                val controller = Fresco.newDraweeControllerBuilder()
+                    .setImageRequest(imageRequest)
+                    .setOldController(ivBack.controller)
+                    .build() as PipelineDraweeController
+
+                ivBack.controller = controller
+
+
+                val idProofUri =
+                    ImageFilePath.getPath(this@EditProfileActivity, selectedImageUri)
+                imageFile = File(idProofUri)
+                imageFile = Constants.saveBitmapToFile(imageFile!!)
+
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Toast.makeText(this, "Cropping failed: " + result.error, Toast.LENGTH_LONG).show()
             }
         }
     }

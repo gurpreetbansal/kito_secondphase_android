@@ -30,11 +30,9 @@ class MySpacePresenter(val view: MySpaceContract.View) {
                 view.showError("No internet connection")
             }
 
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>)
-            {
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 view.hideLoader()
-                if (response.isSuccessful)
-                {
+                if (response.isSuccessful) {
                     val res = response.body()!!.string()
                     try {
                         val object1 = JSONObject(res)
@@ -55,9 +53,7 @@ class MySpacePresenter(val view: MySpaceContract.View) {
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
-                }
-                else
-                {
+                } else {
 
                     //view.showErrorMessage(message)
                     view.showError("No internet connection")

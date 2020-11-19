@@ -10,10 +10,10 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.android.tools.build:gradle:4.1.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.trello:victor:1.0.0'
-        classpath 'com.google.gms:google-services:4.3.2'
+        classpath 'com.trello:victor:1.1.0'
+        classpath 'com.google.gms:google-services:4.3.3'
 
     }
 }

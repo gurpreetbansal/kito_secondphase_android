@@ -18,6 +18,7 @@ import androidx.appcompat.app.AlertDialog
 import android.util.Log
 import android.view.*
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.soyadeti.Interface.APIService
@@ -26,6 +27,9 @@ import com.diggytech.kinoplasticpremios.Login.SignUp.*
 import com.diggytech.kinoplasticpremios.Login.SignUp.PhoneNumberTextWatcherTwo
 import com.diggytech.kinoplasticpremios.Login.SignUp.SpinnerAdapter
 import com.diggytech.kinoplasticpremios.model.LocationArryForUserTwo_Three
+import com.facebook.drawee.backends.pipeline.Fresco
+import com.facebook.drawee.backends.pipeline.PipelineDraweeController
+import com.facebook.imagepipeline.request.ImageRequestBuilder
 //import com.google.firebase.iid.FirebaseInstanceId
 import com.imark.cinch.utils.PhoneNumberTextWatcher
 import com.karumi.dexter.Dexter
@@ -33,7 +37,12 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
+import jp.wasabeef.fresco.processors.BlurPostprocessor
+import kotlinx.android.synthetic.main.activity_edit_profile.*
 import kotlinx.android.synthetic.main.activity_signup2.*
+import kotlinx.android.synthetic.main.activity_signup2.ivBack
 import kotlinx.android.synthetic.main.activity_signup2.view.*
 import kotlinx.android.synthetic.main.activity_signup2.view.txt_spinnerBrands
 import kotlinx.android.synthetic.main.fragment_sign_up.view.*
@@ -373,7 +382,10 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
         }
 
         v.ivCamera.setOnClickListener {
-            selectImage()
+            CropImage.activity()
+                .setGuidelines(CropImageView.Guidelines.ON)
+                .start(requireContext(), this);
+            //selectImage()
         }
         v.ivBack.setOnClickListener {
             signup1.visibility = View.VISIBLE
@@ -785,7 +797,21 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
             Toast.makeText(context, "Image Saved!", Toast.LENGTH_SHORT).show()
 
         }
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            val result = CropImage.getActivityResult(data)
+            if (resultCode == AppCompatActivity.RESULT_OK) {
+                val selectedImageUri = result.uri
 
+                v.ivImage.visibility = View.VISIBLE
+                v.ivImage.setImageURI(selectedImageUri)
+                val idProofUri = ImageFilePath.getPath(activity, selectedImageUri)
+                imageFile = File(idProofUri)
+                imageFile = Constants.saveBitmapToFile(imageFile!!)
+
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Toast.makeText(requireContext(), "Cropping failed: " + result.error, Toast.LENGTH_LONG).show()
+            }
+        }
 
     }
 
@@ -1258,7 +1284,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
                                         Log.e("HI", "HI" + position)
                                     } else {
-                                        if (selected_gender_type != "1") {
+                                        //if (selected_gender_type != "0") {
                                             if (selected_location_status.equals("0")) {
 
                                                 Log.e("HI", "HI" + position)
@@ -1299,7 +1325,7 @@ class SignUpFragmentTwo() : Fragment(), SignUpContract.View {
 
 
                                             }
-                                        }
+
 
                                     }
                                 }

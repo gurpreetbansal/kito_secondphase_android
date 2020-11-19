@@ -216,9 +216,10 @@ class MySpaceFragment : Fragment(), MySpaceContract.View {
             // v.ivProfilePic.setImageURI(myUri)
           //  var image_value="https://clientstagingdev.com/kinoplastic_server/public/images/users/"+image
             var image_value=image
-            Glide.with(activity!!)
+            /*Glide.with(activity!!)
                 .load(image_value)
-                .into(v.ivProfilePic);
+                .into(v.ivProfilePic);*/
+            ivProfilePic.setImageURI(image)
             Log.e("PROFILE_DATA_11", "PROFILE_DATA_11" + image_value)
 
         }
@@ -340,10 +341,10 @@ class MySpaceFragment : Fragment(), MySpaceContract.View {
                         }
 else {
                            // var image_value="https://clientstagingdev.com/kinoplastic_server/public/images/users/"+user_pic
-                            Glide.with(activity!!)
+                           /* Glide.with(activity!!)
                                 .load(user_pic)
-                                .into(v.ivProfilePic);
-
+                                .into(v.ivProfilePic);*/
+                            v.ivProfilePic.setImageURI(user_pic)
                         }
                         var user_location_arrayList=ArrayList<ProfileResponseUserLocation>()
                         var all_brands_string=ArrayList<String>()

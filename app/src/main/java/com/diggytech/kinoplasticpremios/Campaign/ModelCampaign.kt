@@ -7,4 +7,6 @@ class ModelCampaign {
     var image=""
     var start_date=""
     var end_date=""
+    var form_source = ""
+
 }

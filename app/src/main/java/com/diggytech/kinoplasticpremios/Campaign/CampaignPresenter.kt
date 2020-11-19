@@ -84,6 +84,7 @@ class CampaignPresenter(val view: CampaignContract.View) {
 			model.image = object1.optString("image")
 			model.start_date = object1.optString("start_date")
 			model.end_date = object1.optString("end_date")
+			model.form_source = object1.optString("form_source")
 			list.add(model)
 		}
 

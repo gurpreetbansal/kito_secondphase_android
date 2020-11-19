@@ -57,7 +57,10 @@ class CampaignAdapter(val context: Activity, val list: List<ModelCampaign>) :
             holder.btnRegisterSale.setOnClickListener {
 //                val intent = Intent(context, RegisterSaleActivity::class.java)
                 val intent = Intent(context, StartMissionActivity::class.java)
+                var user_id = Constants.getPrefs(context)!!.getString(Constants.USER_ID, "")
                 intent.putExtra("id", model.id)
+                intent.putExtra("form_source", model.form_source)
+                intent.putExtra("user_id", user_id)
                 context.startActivity(intent)
             }
         }
